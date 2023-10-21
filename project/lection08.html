@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lec8\lec8.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css" />
+        <title>ЛЕКЦИЯ 8</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a name="head" href="main.html"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+                </style>
+                <g id="Слой_1">
+                    <g>
+                        <path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+                            c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+                        <path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+                            c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+                        <path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+                        <path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+                    </g>
+                </g>
+                <g id="Слой_2">
+                </g>
+            </svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛЕКЦИЯ 8</h1>
+                <h2>ПРЕОБРАЗОВАНИЯ. ПЕРЕХОДЫ. АНИМАЦИЯ</h2>
+                <nav>
+                    <ol class="ol1">
+                        <li class="li">
+                            <a href="#1">ПРЕОБРАЗОВАНИЯ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#2">ПЕРЕХОДЫ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#3">АНИМАЦИЯ</a>
+                        </li>
+                    </ol>
+                </nav>
+                <h3>
+                    <a name="1" href="#head">ПРЕОБРАЗОВАНИЯ</a>
+                </h3>
+                <section class="sec">
+                    <div class="sec1">
+                        <h5>ТРАНСФОРМАЦИЯ</h5>
+                    <p><span>Трансформация</span> — процесс изменения или искажения формы или положения элемента на странице.</p>
+                    <p>К трансформации относятся вращение, масштабирование, смещение и наклон</p>
+                    <p>Свойство <span>transform</span> определяет вид трансформации элемента</p>
+                    </div>
+                    <div class="sec1">
+                        <h5>ВРАЩЕНИЕ</h5>
+                        <p>Значение <span>rotate()</span> —  поворачивает элемент на определенное количество градусов вокруг оси</p>
+                        <p>Значение <span>rotateX()</span> —  поворачивает элемент на определенное количество градусов вокруг оси X</p>
+                        <p>Значение <span>rotateY()</span> —  поворачивает элемент на определенное количество градусов вокруг оси Y</p>
+                        <p>Значение <span>rotateZ()</span> —  поворачивает элемент на определенное количество градусов вокруг оси Z</p>
+                    <div class="transformation">
+                        <h6>rotateX(30deg)</h6>
+                        <div class="vr1"></div>
+                    </div>
+                    <div class="transformation">
+                        <h6>rotateY(30deg)</h6>
+                        <div class="vr2"></div>
+                    </div>
+                    <div class="transformation">
+                        <h6>rotateZ(30deg)</h6>
+                        <div class="vr3"></div>
+                    </div>
+                    </div>
+                    <div class="sec1">
+                        <h5>СМЕЩЕНИЕ</h5>
+                        <p>Значение <span>translate()</span> — смещает элемент влево, вправо, вверх или вниз (действует также как относи­тельное позиционирование)</p>
+                        <p>Значение <span>translateX() </span> — смещает элемент вправо или влево по оси X</p>
+                        <p>Значение <span>translateY()</span> — смещает элемент вверх или вниз по оси Y</p>
+                        <p>Значение <span>translateZ()</span> — смещает элемент вверх или вниз по оси Z</p>
+                    </div>
+                    <div class="sec1">
+                        <h5>МАСШТАБИРОВАНИЕ</h5>
+                        <p>Значение <span>scale()</span> — сжимает или растягивает элемент</p>
+                        <p>Значение <span>scaleX()</span> — сжимает или растягивает элемент вдоль оси X</p>
+                        <p>Значение <span>scaleY()</span> — сжимает или растягивает элемент по оси Y</p>
+                        <p>Значение <span>scaleZ()</span> — сжимает или растягивает элемент по оси Z</p>
+                        <div class="transformation1">
+                            <h6>without scale() or scaleZ()</h6>
+                            <div class="mash1"></div>
+                        </div>
+                        <div class="transformation1">
+                            <h6>scale(0.5)</h6>
+                            <div class="mash2"></div>
+                        </div>
+                        <div class="transformation1">
+                            <h6>scaleX(0.5)</h6>
+                            <div class="mash3"></div>
+                        </div>
+                        <div class="transformation1">
+                            <h6>scaleY(0.5)</h6>
+                            <div class="mash4"></div>
+                        </div>
+                    </div>
+                    <div class="sec1">
+                        <h5>НАКЛОН</h5>
+                        <p>Значение <span>skew()</span> — изменяет форму элемента, смещая верхний край элемента в одну сто­рону, а нижний — в противоположную (если значение положительное)</p>
+                        <p>Значение <span>skewX()</span> — наклоняет элемент по оси X</p>
+                        <p>Значение <span>skewY()</span> — наклоняет элемент по оси Y</p>
+                        <div class="transformation">
+                            <h6>skew(20deg)</h6>
+                            <div class="nakl1"></div>
+                        </div>
+                        <div class="transformation">
+                            <h6>skewX(20deg)</h6>
+                            <div class="nakl2"></div>
+                        </div>
+                        <div class="transformation">
+                            <h6>skewY(20deg)</h6>
+                            <div class="nakl3"></div>
+                        </div>
+                    </div>
+                    <div class="sec1">
+                        <h5>ЗНАЧЕНИЕ matrix()</h5>
+                    <div class="transformation2">
+                        <h6>without transform</h6>
+                        <div class="matrix1"></div>
+                    </div>
+                    <div class="transformation2">
+                        <h6>without transform</h6>
+                        <div class="matrix2"></div>
+                    </div>
+                    <p class="span">transform: matrix(1.5,0.05,0.08,-0.5,20,70);</p>
+                    </div>
+                    <div class="sec1">
+                        <h5>ПЕРСПЕКТИВА</h5>
+                        <p>Значение <span>perspective()</span> — задает глубину просмотра, т.е. расстояние по оси Z от плоскости экрана до точки сходимости линий</p>
+                        <img src="lec8\perspective.png" alt="perspective" class="img2">
+                        <p>Свойство <span>perspective</span>  используется для придания эффекта перспективы для дочерних элементов внутри родительского элемента</p>
+                        <p>Свойство <span>perspective-origin</span> используется для изменения расположения точки сходимости линий, т.е. глаз зрителя при взгляде на экран</p>
+                        <div class="transformation">
+                            <h6>perspective(100px) rotateX(30deg)</h6>
+                            <div class="persp1"></div>
+                        </div>
+                        <div class="transformation">
+                            <h6>perspective(100px) rotateX(30deg)</h6>
+                            <div class="persp2"></div>
+                        </div>
+                        <div class="transformation">
+                            <h6>perspective(100px) rotateX(30deg)</h6>
+                            <div class="persp3"></div>
+                        </div>
+                    </div>
+                    <div class="sec1">
+                        <h5>СВОЙСТВО transform-origin</h5>
+                        <img src="lec8\transform.png" alt="transform-origin" class="img3">
+                    </div>
+                    <div class="sec1">
+                        <h5>СВОЙСТВО для 3D-трансформации</h5>
+                        <p>Свойства <span>transform-style</span></p>
+                        <p>Свойства <span>backface-visibility</span></p>
+                        <img src="lec8\3d.png" alt="3d" class="img2">
+                    </div>
+                </section>
+                <h3>
+                    <a name="2" href="#head">ПЕРЕХОДЫ</a>
+                </h3>
+                <section class="sec">
+                    <p><span>ПЕРЕХОДЫ</span> — позволяют анимировать исходное значение CSS-свойства на новое значение с течением времени, управляя скоростью смены значений свойств</p>
+                    <p>Свойства <span>transition</span> и его значения используются для управления переходами</p>
+                    <p>Свойство <span>transition-property</span> указывает в каких свойствах должен присутствовать переход</p>
+                    <p>Свойство <span>transition-duration</span> указывает продолжительность перехода</p>
+                    <p>Cвойство <span>transition-timing-function</span> определяет скорость анимации перехода (функция времени)</p>
+                    <p>Свойство <span>transition-delay</span> используется для задержки времени начала перехода</p>
+                    <h6>Краткая форма записи свойства TRANSITION</h6>
+                    <img src="lec8\transition.png" alt="transition" class="img2">
+                    <div class="sec1">
+                        <h5>ФУНКЦИЯ ВРЕМЕНИ</h5>
+                        <img src="lec8\function.png" alt="function" class="img2">
+                    </div>
+                    <div class="sec1">
+                        <h5>ЗНАЧЕНИЕ cubic-bezier</h5>
+                        <img src="lec8\cubic.png" alt="cubic" class="img2">
+                        <div class="code1">
+                            <div id="highlighter_985353" class="syntaxhighlighter  xml">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="gutter">
+                                                <div class="line number1 index0 alt2">1</div>
+                                                <div class="line number2 index1 alt1">2</div>
+                                                <div class="line number3 index2 alt2">3</div>
+                                                <div class="line number4 index3 alt1">4</div>
+                                                <div class="line number5 index4 alt2">5</div>
+                                                <div class="line number6 index5 alt1">6</div>
+                                                <div class="line number7 index6 alt2">7</div>
+                                                <div class="line number8 index7 alt1">8</div>
+                                                <div class="line number9 index8 alt2">9</div>
+                                                <div class="line number10 index9 alt1">10</div>
+                                                <div class="line number11 index10 alt2">11</div>
+                                                <div class="line number12 index11 alt1">12</div>
+                                                <div class="line number13 index12 alt2">13</div>
+                                                <div class="line number14 index13 alt1">14</div>
+                                                <div class="line number15 index14 alt2">15</div>
+                                                <div class="line number16 index15 alt1">16</div>
+                                                <div class="line number17 index16 alt2">17</div>
+                                                <div class="line number18 index17 alt1">18</div>
+                                                <div class="line number19 index18 alt2">19</div>
+                                                <div class="line number20 index19 alt1">20</div>
+                                                <div class="line number21 index20 alt2">21</div>
+                                                <div class="line number22 index21 alt1">22</div>
+                                                <div class="line number23 index22 alt2">23</div>
+                                                <div class="line number24 index23 alt1">24</div>
+                                            </td>
+                                            <td class="code">
+                                                <div class="container">
+                                                    <div class="line number1 index0 alt2"><code class="xml plain">&lt;!DOCTYPE&nbsp;html&gt;</code></div>
+                                                    <div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code>&nbsp;<code class="xml color1">lang</code><code class="xml plain">=</code><code class="xml string">"en"</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"UTF-8"</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">http-equiv</code><code class="xml plain">=</code><code class="xml string">"X-UA-Compatible"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"IE=edge"</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"viewport"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"width=device-width,&nbsp;initial-scale=1.0"</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Transition&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">.div1{</code></div>
+                                                    <div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">width:&nbsp;200px;</code></div>
+                                                    <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">height:&nbsp;200px;</code></div>
+                                                    <div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">border:&nbsp;2px&nbsp;solid&nbsp;black;</code></div>
+                                                    <div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">background:&nbsp;red;</code></div>
+                                                    <div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">transition:&nbsp;background-color&nbsp;5s&nbsp;cubic-bezier(0.45,&nbsp;0.05,&nbsp;0.55,&nbsp;0.95);</code></div>
+                                                    <div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                                    <div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">.div1:hover{</code></div>
+                                                    <div class="line number17 index16 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">background:&nbsp;green;</code></div>
+                                                    <div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                                    <div class="line number19 index18 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number20 index19 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number21 index20 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number22 index21 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">div</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"div1"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">div</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number23 index22 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                                    <div class="line number24 index23 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <h3>
+                    <a name="3" href="#head">АНИМАЦИЯ</a>
+                </h3>
+                <section class="sec">
+                    <p><span>АНИМАЦИЯ</span> — процесс перехода от одного набора свойств к нескольким наборам свойств</p>
+                    <img src="lec8\ani.png" alt="animation" class="img1">
+                    <img src="lec8\ani1.png" alt="animation" class="img1">
+                    <p>Свойство <span>animation</span> используется для добавления анимации к элементу в сокращенной записи</p>
+                    <p>Свойство <span>animation-name</span> используется для добавления имени анимации к элементу, заданного в <span class="span2">@keyframes</span></p>
+                    <p>Свойство  <span>animation-timing-function</span> описывает плавность воспроизведения анимации между каждой парой ключевых кадров;</p>
+                    <p>Свойство <span>animation-delay</span> используется для задержки начала воспроизведения анимации</p>
+                    <p>Свойство <span>animation-iteration-count</span> устанавливает сколько раз анимация должна проигрываться</p>
+                    <p>Свойство <span>animation-direction</span> определяет воспроизведение вперед, назад или в случайной последовательности</p>
+                    <img src="lec8\anidir.png" alt="animedir" class="img">
+                    <p>Свойство <span>animation-fill-mode</span> выясняет состояние анимации, когда она не воспроизводится</p>
+                    <p>Свойство <span>animation-play-station</span> определяет запущена анимация или приостановлена</p>
+                </section>
+        </main>
+        <div class="pred">
+            <a href="lection7.html">&#9668;Предыдущая лекция</a>
+        </div>
+        <div class="sled">
+            <a href="lection9.html">Cледующая лекция &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>
+

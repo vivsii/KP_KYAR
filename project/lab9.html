@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lab\lab9.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <title>ЛАБОРАТОРНАЯ 9</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a href="main.html" name="head"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+				</style>
+				<g id="Слой_1">
+					<g>
+						<path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+							c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+						<path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+							c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+						<path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+						<path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+					</g>
+				</g>
+				<g id="Слой_2">
+				</g>
+			</svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛАБОРАТОРНАЯ 9</h1>
+            <h2>СИСТЕМА МОДУЛЬНОЙ ВЕРСТКИ</h2>
+            <nav>
+                <ul class="ul">
+                    <li class="li">
+                        <a href="#1">ТЕОРЕТИЧЕСКИЕ СВЕДЕНИЯ</a>
+                        <ol>
+                            <li><a href="#2">ПОНЯТИЕ МОДУЛЬНОЙ СЕТКИ</a></li>
+                            <li><a href="#3">СИСТЕМА МОДУЛЬНОЙ ВЕРСТКИ SKELETON</a></li>
+                            <li><a href="#4">ИСПОЛЬЗОВАНИЕ GRID-ВЕРСТКИ</a></li>
+                        </ol>
+                    </li>
+                    <li class="li">
+                        <a href="#5">ЗАДАНИЯ К РАБОТЕ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#6">КОНТРОЛЬНЫЕ ВОПРОСЫ</a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="p"><span class="span">ЦЕЛЬ РАБОТЫ:</span> изучить веб-верстку с использованием модульной сетки, научиться составлять модульные сетки и использовать свойства grid-верстки.</p>
+            <h2><a name="1" href="#head">Теоретические сведения для выполнения работы</a></h2>
+            <section class="sec">
+                <h3><a href="#head" name="2">ПОНЯТИЕ МОДУЛЬНОЙ СЕТКИ</a></h3>
+                <p>Модульные сетка определяет двумерную разметку колонок и строк, в которые можно поместить в элементы. Страница по ширине делится на определенное количество столбцов модульной сетки, которые группируются для создания колонок контейнера. Некоторые элементы заполняют только одну ячейку сетки, а другие способны расширяться и размещаться в соседних колонках и строках.</p>
+                <p>роках. Система модульной верстки основана на создании следующих элементов:</p>
+                <ol>
+                    <li>Контейнера. Контейнер <div> содержит одну или несколько строк.</li>
+                    <li> Строки. Это также &lt;div> элемент, помещенный в контейнер.</li>
+                    <li>Колонки. Колонки определяются элементами &lt;div> в строке.</li>
+                </ol>
+                <h3><a href="#head" name="3">СИСТЕМА МОДУЛЬНОЙ ВЕРСТКИ SKELETON</a></h3>
+                <p>Система Skeleton — адаптивная система модульной верстки веб-страниц. Система позволяет сверстать сетчатый макет структурировав контент страницы в несколько колонок на планшетных устройствах, ноутбуках и компьютерах. На смартфоне содержимое страницы преобразуется в одноколоночный.</p>
+                <p>Чтобы начать работу, необходимо посетить сайт <i>getskeleton.com</i> и нажать кнопку Download. Загруженный архив содержит несколько папок и файлов. В каталоге <i>css</i> расположены необходимые файлы <i>normalize.css</i>, который сбрасывает базовые стили CSS, чтобы браузеры отображали HTML-элементы одинаково, и файл <i>skeleton.css</i>, содержащий для компоновки макета с использованием модульной сетки.</p>
+                <p>Система Skeleton основана на модульной сетке, состоящей из 12 столбцов, поэтому каждый из добавленных элементов &lt;div> должен быть не менее одного или не более 12 (полная ширина контейнера) столбцов в ширину. Например, чтобы создать три равные по ширине колонки, можно добавить три элемента &lt;div> согласно рисунку ниже</p>
+                <p class="div">&lt;div class="container"><br>&emsp;&lt;div class="row"><br>&emsp;&emsp;&lt;div class="four columns"><br>&emsp;&emsp;&lt;/div><br>&emsp;&emsp;&lt;div class="four columns"><br>&emsp;&emsp;&lt;/div><br>&emsp;&emsp;&lt;div class="four columns"><br>&emsp;&emsp;&lt;/div><br>&emsp;&lt;/div><br>&lt;/div></p>
+                <p>Таким образом, система модульной верстки реализуется следующим образом:</p>
+                <ol>
+                    <li>Подключить CSS-файлы normalize.css и skeleton.css:</li>
+                    <li>Добавить контейнеры div.</li>
+                    <li>Добавить контейнеры div для строк</li>
+                    <li>Добавить контейнеры div для колонок</li>
+                    <li> Добавить контент в элементы div колонок</li>
+                    <li> Создать собственные стили, например custom.css</li>
+                </ol>
+                <h3><a href="#head" name="4">ИСПОЛЬЗОВАНИЕ GRID-ВЕРСТКИ</a></h3>
+                <p>Grid-верстка — это разбиение макета на области. Сетка (grid) представляет собой совокупность пересекающихся горизонтальных и вертикальных линий, разделяющих пространство gridконтейнера на области сетки, в которые могут быть помещены содержимое элементов сетки. Контейнер ведет себя как блочный элемент, заполняя 100 % доступной ширины. На рис. ниже представлены компоненты сетки, к которым относятся ячейка, область сетки, полоса (колонка или строка) сетки. Полосой сетки является расстояние между двумя соседними линиями сетки. Ячейка сетки — пространство в сетке, где пересекаются горизонтальная и вертикальная полосы сетки. Одна или несколько ячеек составляет область сетки.</p>
+                <img src="lab\grid1.png" alt="grid">
+                <p>Предварительно необходимо создать grid-контейнеры с помощью <i>display: <span>grid</span></i> или <i>display: <span>inline-grid</span></i>.</p>
+                <p class="div">.grid {
+                    display: grid;
+                    grid-template-columns: 40px 60px
+                    40px;
+                    grid-template-rows: 10px 10px;
+                    grid-gap: 5px;
+                    }<br>&lt;div class="grid"><br>&emsp;&lt;div>l&lt;/div><br>&emsp;&lt;div>2&lt;/div><br>&emsp;&lt;div>3&lt;/div><br>&emsp;&lt;div>4&lt;/div><br>&emsp;&lt;div>5&lt;/div><br>&emsp;&lt;div>6&lt;/div><br>&lt;/div>
+                </p>
+                <p>Например, на рис. 9.1 элемент с классом <i><span>grid</span></i> становится контейнером сетки, его потомки элементами сетки и занимает 100% доступной ширины. Свойства <i>grid-template-columns</i> и <i>grid-template-rows</i> устанавливают размер каждой колонки и каждой строки сетки. Для выравнивания текстовой информации по центру горизонтально в ячейках сетки необходимо <i>text-align: <span>center</span>;</i>, а для вертикального выравнивания использовать <i><span>padding</span></i>.</p>
+                <p>Также можно использовать свойство <i>grid-template-areas</i> и присваивая имена ячейкам сетки свойство <i>grid-area</i> можно построить области сетки.</p>
+                <p class="div">.grid{<br>&emsp;display:grid;<br>&emsp;grid-template-areas: "x y w" "x2 y2 w2";<br>&emsp;grid-template-columns: 20px 20px 20px;<br>&emsp;grid-template-rows: 20px 20px 20px;<br>&emsp;grid-gap: 5px;<br>}<br>&lt;div class="grid"><br>&emsp;&lt;div style="grid-area: x;">1&lt;/div><br>&emsp;&lt;div style="grid-area: y;">2&lt;/div><br>&emsp;&lt;div style="grid-area: w;">3&lt;/div><br>&emsp;&lt;div style="grid-area: x2;">4&lt;/div><br>&emsp;&lt;div style="grid-area: y2;">5&lt;/div><br>&lt;/div></p>
+                <p>Чтобы <i>установить</i> промежутки пробелов между колонками или строками используются свойства <i>grid-column-rap</i> и <i>grid-row-rap</i>. Следует отметить, что промежутки между колонками или строками не могут быть разными.</p>
+                <p>Для определения области сетки для одной ячейки установить свойства <i>grid-column-start</i>(<i>grid-column-end</i>) и <i>grid-row-start</i>(<i>gridrow-end</i>), значениями которых указывается номер линии сетки. Можно использовать сокращенную запись <i>grid-row: <span>n/m</span>;</i> (<i>gridcolumn: <span>n/m</span>;</i>), где <i><span>n</span></i> является номером линии, с которой начинается область сетки, а <i><span>m</span></i> определяет линию, где она заканчивается. Результат применения свойств <i>grid-row: <span>2/3</span>;</i> и <i>grid-column: <span>2/4</span>;</i> представлен на рис. ниже</p>
+                <img src="lab\grid2.png" alt="grid">
+            </section>
+            <h2><a href="#head" name="5">Задания к лабораторной работе № 9</a></h2>
+            <section class="sec1">
+                <p><span>Задание 1</span> Создайте два HTML-документа, согласно макетам, представленным ниже с использованием элементов gridверстки и добавьте в соответствующие ячейки и заголовок добавить информацию на тему «HTML5 и CSS3». Элементы занимают видимую область экрана браузера.</p>
+                <img src="lab\grid3.png" alt="grid">
+                <p>Задание 2 Создать веб-страницу, согласно рисунку ниже. В ячейке 9 необходимо добавить gif-изображение, а ячейка 10 должна содержать фото с текстом, из остальных ячеек сделать фотогалерею с названиями для каждой фотографий. Элементы занимают видимую область экрана браузера.</p>
+                <img src="lab\grid4.png" alt="grid">
+                <p>Задание 3 Создать два html-документа, соответствующую макетам, представленным на рис. 9.8, заполнив ее произвольной информацию на тему «Grid-верстка». В меню <i><span>nav</span></i> должны быть гиперссылки на ресурсы, содержащие информацию по HTML5, СSS3 и Grid-верстке. Для разметки использовать свойство <i><span>grid-template-areas</span></i>. Элементы занимают видимую область экрана браузера</p>
+                <img src="lab\grid5.png" alt="grid">
+                <p><span>Задание 4</span> Используя файлы системы модульной верстки Skeleton создать HTML-документ следующим образом:</p>
+                <p><span>2.1</span> В первой строке 2 столбца, в первом столбце логотип факультета, во втором горизонтальное навигационное меню из гиперссылок на страницы предыдущих заданий.</p>
+                <p><span>2.2</span> Во второй строке 4 столбца с заголовками</p>
+                <p><span>2.3</span> В третье строке 4 столбца соответствующие заголовкам пункта 2.2 с информацией о свойствах grid-верстки.</p>
+            </section>
+            <section class="sec">
+                <h2><a href="#head" name="6">Контрольные вопросы</a></h2>
+                <ol class="ol">
+                    <li class="li">Что представляет из себя модульная сетка?</li>
+                    <li class="li"> Что такое система модульной верстки Skeleton?</li>
+                    <li class="li"> Каким образом использовать систему Skeleton?</li>
+                    <li class="li">Что означают стили в файле <i>skeleton.css</i>?</li>
+                    <li class="li">Назовите этапы реализации системы модульной верстки Skeleton.</li>
+                    <li class="li">Что такое grid-верстка?</li>
+                    <li class="li"> Для чего необходимо свойство <i>grid-template-areas</i>?</li>
+                    <li class="li">Для чего используется свойство <i>grid-template-columns</i>?</li>
+                    <li class="li">Для чего используется свойство <i>grid-area</i>?</li>
+                    <li class="li">Для чего предназначено свойство <i>grid-row</i>?</li>
+                    <li class="li"> Что означает <i>grid-template-columns: 20px 20px 20px;</i>?</li>
+                    <li class="li">Что означает <i>grid-row-end: 4;</i>?</li>
+                    <li class="li">Для чего используется свойство <i>grid-gap</i>?</li>
+                    <li class="li">Создайте документ, содержащий три колонки и три строки, вторую строку сделать красного цвета, в первую добавить абзац синего цвета.</li>
+                    <li class="li">. Для чего используются свойства <i>align-self</i> и <i>justify-self</i>?</li>
+                </ol>
+            </section>
+        </main>
+        <div class="pred">
+            <a href="lab8.html">&#9668;Предыдущая лабораторная</a>
+        </div>
+        <div class="sled">
+            <a href="lab10.html">Cледующая лабораторная &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() { 
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <link rel="stylesheet" href="lec4\lec4.css">
+        <title>ЛЕКЦИЯ 4</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a name="head" href="main.html"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+                </style>
+                <g id="Слой_1">
+                    <g>
+                        <path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+                            c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+                        <path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+                            c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+                        <path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+                        <path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+                    </g>
+                </g>
+                <g id="Слой_2">
+                </g>
+            </svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛЕКЦИЯ 4</h1>
+            <h2>КАСКАДНЫЕ ТАБЛИЦЫ СТИЛЕЙ (CSS3)ОСНОВЫ</h2>
+            <nav>
+                <ol class="ol1">
+                    <li class="li">
+                        <a href="#1">ОСНОВНЫЕ ВЕРСИИ CSS</a>
+                    </li>
+                    <li class="li">
+                        <a href="#2">СОЗДАНИЕ СТИЛЕЙ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#3">СИНТАКСИС CSS</a>
+                    </li>
+                    <li class="li">
+                        <a href="#4">КЛАССИФИКАЦИЯ СЕЛЕКТОРОВ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#5">ПСЕВДОКЛАССЫ И ПСЕВДОЭЛЕМЕНТЫ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#6">МЕХАНИЗМ НАСЛЕДОВАНИЯ СТИЛЕЙ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#7">КАСКАДНОСТЬ СТИЛЕЙ</a>
+                    </li>
+                </ol>
+            </nav>
+            <h3>ОПРЕДЕЛЕНИЕ</h3>
+            <section class="sec">
+                <p class="span">CSS (Cascading Style Sheets)</p>
+                <p><span>1. Определение из спецификации W3C</span></p>
+                <p>язык для описания рендеринга структурированных документов (таких как HTML и XML) на экране</p>
+                <p><span>2.</span></p>
+                <p>язык иерархических правил, используемый для представления внешнего вида документа, написанного на HTML или XML</p>
+            </section>
+            <h3>
+                <a name="1" href="#head">ОСНОВНЫЕ ВЕРСИИ CSS</a>
+            </h3>
+            <section class="sec">
+                <p class="span">Термин «каскадные таблицы стилей» был предложен Хокон Виум Ли в 1994 году</p>
+                <p>17 декабря 1996 г. CSS1</p>
+                <p>12 мая 1998 г. CSS2</p>
+                <p>22 июня 1999 г. CSS3</p>
+                <p>7 июня 2011 CSS2.1</p>
+            </section>
+            <h3>
+                <a name="2" href="#head">СОЗДАНИЕ СТИЛЕЙ</a>
+            </h3>
+            <section class="sec">
+                <ol class="ol2">
+                    <li class="li">С помощью тега <span>&lt;style&gt;</span> создаются внутренние таблицы стилей, который располагается в теге <span>&lt;head&gt;</span></li>
+                    <li class="li">Создание во внешнем файле и подключение с помощью тега link. Такие таблицы стилей называются внешними.</li>
+                </ol>
+                <p class="span">&lt;link rel="stylesheet" href="styles.css"&gt;</p>
+                <ol class="ol2">
+                    <li value="3" class="li">С помощью атрибута <span>style</span>, создавая встроенные стили</li>
+                </ol>
+                <p class="span">&lt;span style="color: blue; text-align: center“&gt;</p>
+                <h4 class="h5">ПРЕИМУЩЕСТВА CSS</h4>
+                <ol class="ol3">
+                    <li class="li1">Возможность хранения таблиц стилей CSS в отдельном файле, что ускоряет загрузку страниц</li>
+                    <li class="li1">Применение одних и тех же стилей сразу к нескольким элементам, в том числе и к тем, которые расположены на разных страницах</li>
+                    <li class="li1">Разделение оформления и содержания, что позволяет работать над дизайном и контентом сайта параллельно</li>
+                    <li class="li1">Точность контроля за отображением и позиционированием всех элементов страниц вашего сайта</li>
+                    <li class="li1">Позволяет применять к одному и тому же документу разные стили в зависимости от типа устройств вывода</li>
+                </ol>
+            </section>
+            <h3>
+                <a name="3" href="#head">СИНТАКСИС CSS</a>
+            </h3>
+            <section class="sec">
+                <p>Общий синтаксис CSS представляет собой следующий вид:</p>
+                <p class="span">СЕЛЕКТОР {СВОЙСТВО: ЗНАЧЕНИЕ}</p>
+                <p><span>СЕЛЕКТОР</span> сообщает браузеру элемент веб-страницы, к которому необходимо применить стиль</p>
+                <p><span>БЛОК ОБЪЯВЛЕНИЯ</span> код, расположенный сразу за селектором, содержит все ко-манды форматирования, которые можно применить к этому селектору, располагается в фигурных скобках</p>
+                <p><span>ОБЪЯВЛЕНИЕ</span> состоит из свойства и значения, которые отделяются друг от друга двоеточием</p>
+                <p><span>СВОЙСТВА</span> представляет собой слово или несколько написанных через дефис слов, определяющих конкретный стиль</p>
+                <p><span>ЗНАЧЕНИЕ</span> величина или ключевое слово определяющее стиль свойства</p>
+                <img src="lec4\syn.png" alt="syntax" class="img">
+                <img src="lec4\syn1.png" alt="syntax" class="img1">
+            </section>
+            <h3>
+                <a name="4" href="#head">КЛАССИФИКАЦИЯ СЕЛЕКТОРОВ</a>
+            </h3>
+            <section class="sec">
+                <ol class="ol3">
+                    <li>Селектор тега</li>
+                    <li>Селектор класса</li>
+                    <li>Селектор идентификатора</li>
+                    <li>Селекторы атибутов</li>
+                    <li>Универсальный селектор</li>
+                    <li>Псевдоклассы и псевдоэлементы</li>
+                </ol>
+                <div class="sec1">
+                    <h4 class="h5">СЕЛЕКТОР ТЕГА</h4>
+                    <p><span>Селекторы тегов (или селекторы элементов)</span> – cелекторы, которые используются для применения стилей к определенным HTML-элементам называются </p>
+                    <p><span>Групповой селектор</span> позволяет применять стиль одновременно для нескольких элементов</p>
+                    <p><span>Селекторы потомков</span> используются для указания элемента по отношению к его родительскому элементу и применяется ко всем элементам потомка</p>
+                    <p><span>Дочерний селектор</span> позволяет определить конкретный дочерний и родительский элемент</p>
+                    <p><span>Cмежным родственным элемен­том того же уровня</span> – элемент,в HTML, который следует сразу же за другим элементом. <span class="span2">Смежный родственный селектор</span> использует знак <span class="span2">+</span> для соединения одного элемента с другим</p>
+                    <p><span>Общий сборный родственный селектор</span> позволяет, используя ~, отформатировать все родственные элементы</p>
+                </div>
+                <div class="sec1">
+                    <h4 class="h5">СЕЛЕКТОРЫ КЛАССОВ</h4>
+                    <p><span>Cелектор класса</span> используется, когда необходимо определить стиль для индивидуального элемента веб-страницы или задать разные стили для одного тега, но не связывать с конкретным HTML-элементом.</p>
+                    <p>Для применения блока объявления класс используется атрибут <span class="span2">class</span> к элементу</p>
+                    <h4 class="h6">СИНТАКСИС</h4>
+                    <ol class="ol5">
+                        <li>Все имена классов должны начинаться с точки</li>
+                        <li>Избегайте пробелов внутри имен классов</li>
+                        <li>При составлении имени класса использовать латинские буквы, цифры дефисы и знаки подчеркивания</li>
+                        <li>Имя после точки всегда должно начинаться с латинской буквы</li>
+                        <li>Имена классов чувствительны к регистру</li>
+                    </ol>
+                    <img src="lec4\reg.png" alt="registr" class="img2">
+                </div>
+                <div class="sec1">
+                    <h4 class="h5">СЕЛЕКТОР ИДЕНТИФИКАТОРА</h4>
+                    <p><span>Селектор идентификатора</span> используется, когда необходимо определить стиль для уникального элемента и применения JavaScript-сценариев.</p>
+                    <p>Все имена идентификаторов начинаются с <span class="span2">#</span></p>
+                    <p>Для использования блока объявления идентификатора используется атрибут <span class="span2">id</span></p>
+                </div>
+                <div class="sec1">
+                    <h4 class="h5">СЕЛЕКТОР АТРИБУТОВ</h4>
+                    <p>Позволяет применить стили к элементам с конкретными атрибутами и их значениями</p>
+                    <p><span>img[alt]</span> — изменяет элементы, для которых указан атрибут <span class="span2">alt</span> вне зависимости от его значения</p>
+                    <p><span>img[alt="text"]</span> — применяют стили к элементам, у которых атрибут <span class="span2">alt</span> имеет значение <span class="span2">text</span>
+                    </p>
+                    <p><span>[attr^="значение"]</span> — селектор атрибутов, выбирающий элементы начинающиеся на значение атрибута. <span class="span2">Пример: а[href^="https"]</span>.</p>
+                    <p><span>img[src$=".jpg"]</span> — применяет стили к элементам, которые заканчиваются на <span class="span2">.jpg</span></p>
+                    <p><span>img[src*="photo"]</span> — селектор атрибутов применяте стили к любым <span class="span2">img</span>, которые содержать в названии <span class="span2">photo</span></p>
+                    <p><span>[attr~="значение"]</span> — выбирает элементы по атрибуту и значению, представляющему собой список разделенных пробелами значений, одно из которых соответствует заданном значению. <span class="span2">Пример: p[class~=“ban"]</span>.
+                    </p>
+                    <p><span>[attr&vert;="значение"]</span> — по атрибуту и значению, которое либо соот­ветствует указанной строке, либо начинается с нее и сопровождается дефисом. <span class="span2">Например, для атрибута lang: [lang="en-US"]</span></p>
+                </div>
+            </section>
+            <h3>
+                <a name="5" href="#head">ПСЕВДОКЛАССЫ И ПСЕВДОЭЛЕМЕНТЫ</a>
+            </h3>
+            <section class="sec">
+                <p><span>ПСЕВДОКЛАССЫ</span> — определяют динамическое состояние элементов, которое изменяется с помощью действий пользователя, а также в зависимости от положения в DOM</p>
+                <p><span>ПСЕВДОЭЛЕМЕНТЫ</span> — позволяют задать стиль определенной части не относящийся к элементам документа </p>
+                <h4 class="h5">ПСЕВДОКЛАССЫ</h4>
+                <div class="sec1">
+                    <p><span>a:link</span> — обозначает стиль непосещенных гиперссылок</p>
+                    <p><span>a:visited</span> — обозначает стиль посещенных ссылок</p>
+                    <p><span>a:hover</span> — позволяет изменять вид ссылки, на которую посетитель навел указа-тель мыши</p>
+                    <p><span>a:active</span> — позволяет определить, как будет выглядеть ссылка во время выбора ее посетителем веб-страницы</p>
+                    <p><span>:focus</span> — фокусировка и изменение стиля элементов, которые получили фокус с помощью щелчка кнопкой мыши, касания экрана или нажатия клавиши <span class="span2">Tab</span></p>
+                    <p><span>:disabled</span> —  указывает на элементы формы, которые отключены</p>
+                    <p><span>:enabled</span> —  указывает на элементы, которые включены</p>
+                    <p><span>:first-child</span> — выбирает первый дочерний элемент</p>
+                    <p><span>:last-child</span> —  выбирает последний дочерний элемент</p>
+                    <p><span>:only-child</span> —  единственный дочерний элемент</p>
+                    <p><span>:nth-child(odd)</span> — выбирает все нечетные дочерние элементы</p>
+                    <p><span>:nth-child(even)</span> — выбирает все четные дочерние элементы</p>
+                    <p><span>:nth-child(5n+4)</span> — применение стиля к каждому пятому дочернему элементу, начиная с четвертого дочернего элемента</p>
+                    <p><span>:nth-last-child()</span> —  работает аналогично псевдоклассу <span class="span2">:nth-child()</span>, только в обратном порядке, начиная с конца</p>
+                    <p><span>:first-of-type</span> — выбирает элемент, который является первым потомком родителя заданного тега</p>
+                    <p><span>:last-of-type</span> — выбирает элемент, который является последним потомком родителя заданного тега</p>
+                    <p><span>:nth-of-type</span> — выбирает элемент, который является n-ным потомком заданного тега</p>
+                    <p><span>:target</span> — соответствует элементу, на который указывает идентификатор в URL документа</p>
+                    <p><span>:any-link</span> —   указывает на элементы, которые используют псевдоклассы <span class="span2">:link</span> и <span class="span2">:visited</span></p>
+                    <p><span>:lang()</span> —  позволяет задать стиль в зависимости от языка</p>
+                    <p><span>:optional</span> —  указывает на элементы input, которые не обязательны к заполнению (без атрибута required)</p>
+                    <p><span>:required</span> —  указывает на элементы input, которые обязательны к заполнению (указан атрибут required)</p>
+                    <p><span>:checked</span> —  указывает на элементы input (type=”radio / checkbox”) и option (внутри тега select), которые выбраны</p>
+                    <p><span>:not()</span> — позволяет выбрать что-либо отличное от другого</p>
+                </div>
+                <h4 class="h5">ПСЕВДОЭЛЕМЕНТЫ</h4>
+                <div class="sec1">
+                    <p><span>:first-letter</span> — применение стиля к первой букве первой строки блочного элемента</p>
+                    <p><span>::before</span> —  создает псевдоэлемент и добавляет до выбранного элемента</p>
+                    <p><span>::after</span> — создает пседоэлемент и добавляет его после выбранного элемента</p>
+                    <p><span>::selection</span> —  позволяет применить некоторые стили к элементам, которые были выделены пользователем</p>
+                    <p><span>::first-line</span> — применение стиля к первой строке блочного элемента</p>
+                    <p><span>::marker</span> —  позволяет применить некоторые стили к маркерам списка или элементам со значением display: list-item;</p>
+                    <p><span>::placeholder</span> —  позволяет применить некоторые стили к тексту атрибута <span class="span2">placeholder</span> в элементах <span class="sec1">input</span> и <span class="sec1"></span></p>
+                </div>
+                <div class="sec1">
+                    <h4 class="h5">УНИВЕРСАЛЬНЫЙ СЕЛЕКТОР</h4>
+                    <p>Используется для применения стилей ко всем элементам страницы вместо указания каждого по отдельности. Селектор обозначается <span>*</span></p>
+                    <p>Веб-дизайнеры используют универсальный селектор как способ очистки всего пространства вокруг блочных элементов</p>
+                    <img src="lec4\unselec.png" alt="unselec" class="img2">
+                </div>
+            </section>
+            <h3>
+                <a name="6" href="#head">МЕХАНИЗМ НАСЛЕДОВАНИЯ СТИЛЕЙ</a>
+            </h3>
+            <section class="sec">
+                <p>Это механизм, с помощью которого стили применяются не только к указанным элементам, но также к их потомкам.</p>
+                <p>Не наследуются:</p>
+                <ol class="ol3">
+                    <li>Свойства, которые затрагивают размещение элементов на странице (поля, фоновый цвет, границы элементов)</li>
+                    <li>Встроенные стили браузеров для форматирования различных элементов</li>
+                </ol>
+                <p>Свойства, которые наследуются:</p>
+                <p class="span">list-style, list-style-type, list-style-position и list-style-image</p>
+                <p class="span">color, font, font-family, font-size, font-weight, font-variant, font-style, line-height, letter-spacing,  text-align, text-indent, text-transform, white-space и word-spacing</p>
+                <div class="code1">
+                    <div id="highlighter_247473" class="syntaxhighlighter  xml">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="gutter">
+                                        <div class="line number1 index0 alt2">1</div>
+                                        <div class="line number2 index1 alt1">2</div>
+                                        <div class="line number3 index2 alt2">3</div>
+                                        <div class="line number4 index3 alt1">4</div>
+                                        <div class="line number5 index4 alt2">5</div>
+                                        <div class="line number6 index5 alt1">6</div>
+                                        <div class="line number7 index6 alt2">7</div>
+                                        <div class="line number8 index7 alt1">8</div>
+                                        <div class="line number9 index8 alt2">9</div>
+                                        <div class="line number10 index9 alt1">10</div>
+                                        <div class="line number11 index10 alt2">11</div>
+                                        <div class="line number12 index11 alt1">12</div>
+                                        <div class="line number13 index12 alt2">13</div>
+                                        <div class="line number14 index13 alt1">14</div>
+                                        <div class="line number15 index14 alt2">15</div>
+                                        <div class="line number16 index15 alt1">16</div>
+                                        <div class="line number17 index16 alt2">17</div>
+                                        <div class="line number18 index17 alt1">18</div>
+                                        <div class="line number19 index18 alt2">19</div>
+                                    </td>
+                                    <td class="code">
+                                        <div class="container">
+                                            <div class="line number1 index0 alt2"><code class="xml plain">&lt;!DOCTYPE&nbsp;html&gt;</code></div>
+                                            <div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Наследование&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">.first_p{</code></div>
+                                            <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:&nbsp;purple;</code></div>
+                                            <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">font-size:&nbsp;20px;</code></div>
+                                            <div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">font-style:&nbsp;italic;</code></div>
+                                            <div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                            <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">span{</code></div>
+                                            <div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:&nbsp;black;</code></div>
+                                            <div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                            <div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number17 index16 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">p</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"first_p"</code><code class="xml plain">&gt;Lorem&nbsp;&lt;</code><code class="xml keyword">span</code><code class="xml plain">&gt;span&lt;/</code><code class="xml keyword">span</code><code class="xml plain">&gt;&nbsp;dolor&nbsp;sit&nbsp;amet&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number19 index18 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="code1">
+                    <div id="highlighter_289760" class="syntaxhighlighter  xml">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="gutter">
+                                        <div class="line number1 index0 alt2">1</div>
+                                        <div class="line number2 index1 alt1">2</div>
+                                        <div class="line number3 index2 alt2">3</div>
+                                        <div class="line number4 index3 alt1">4</div>
+                                        <div class="line number5 index4 alt2">5</div>
+                                        <div class="line number6 index5 alt1">6</div>
+                                        <div class="line number7 index6 alt2">7</div>
+                                        <div class="line number8 index7 alt1">8</div>
+                                        <div class="line number9 index8 alt2">9</div>
+                                        <div class="line number10 index9 alt1">10</div>
+                                        <div class="line number11 index10 alt2">11</div>
+                                        <div class="line number12 index11 alt1">12</div>
+                                        <div class="line number13 index12 alt2">13</div>
+                                        <div class="line number14 index13 alt1">14</div>
+                                        <div class="line number15 index14 alt2">15</div>
+                                        <div class="line number16 index15 alt1">16</div>
+                                        <div class="line number17 index16 alt2">17</div>
+                                        <div class="line number18 index17 alt1">18</div>
+                                        <div class="line number19 index18 alt2">19</div>
+                                        <div class="line number20 index19 alt1">20</div>
+                                        <div class="line number21 index20 alt2">21</div>
+                                        <div class="line number22 index21 alt1">22</div>
+                                        <div class="line number23 index22 alt2">23</div>
+                                        <div class="line number24 index23 alt1">24</div>
+                                        <div class="line number25 index24 alt2">25</div>
+                                        <div class="line number26 index25 alt1">26</div>
+                                        <div class="line number27 index26 alt2">27</div>
+                                        <div class="line number28 index27 alt1">28</div>
+                                        <div class="line number29 index28 alt2">29</div>
+                                        <div class="line number30 index29 alt1">30</div>
+                                        <div class="line number31 index30 alt2">31</div>
+                                    </td>
+                                    <td class="code">
+                                        <div class="container">
+                                            <div class="line number1 index0 alt2"><code class="xml plain">&lt;!DOCTYPE&nbsp;html&gt;</code></div>
+                                            <div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Наследование&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">body{</code></div>
+                                            <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:&nbsp;green;</code></div>
+                                            <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                            <div class="line number9 index8 alt2">&nbsp;</div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">.my-class-1&nbsp;a{</code></div>
+                                            <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:&nbsp;inherit;</code></div>
+                                            <div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                            <div class="line number13 index12 alt2">&nbsp;</div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">.my-class-2&nbsp;a{</code></div>
+                                            <div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:&nbsp;initial;</code></div>
+                                            <div class="line number16 index15 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                            <div class="line number17 index16 alt2">&nbsp;</div>
+                                            <div class="line number18 index17 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">.my-class-3&nbsp;a{</code></div>
+                                            <div class="line number19 index18 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:&nbsp;unset;</code></div>
+                                            <div class="line number20 index19 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div>
+                                            <div class="line number21 index20 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number22 index21 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number23 index22 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number24 index23 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number25 index24 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Default&nbsp;&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code><code class="xml plain">&gt;link&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;&nbsp;color&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number26 index25 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"my-class-1"</code><code class="xml plain">&gt;Inherit&nbsp;the&nbsp;&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code><code class="xml plain">&gt;link&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;&nbsp;color&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number27 index26 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"my-class-2"</code><code class="xml plain">&gt;Reset&nbsp;the&nbsp;&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code><code class="xml plain">&gt;link&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;&nbsp;color&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number28 index27 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code>&nbsp;<code class="xml color1">class</code><code class="xml plain">=</code><code class="xml string">"my-class-3"</code><code class="xml plain">&gt;Unset&nbsp;the&nbsp;&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"#"</code><code class="xml plain">&gt;link&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;&nbsp;color&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number29 index28 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number30 index29 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number31 index30 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <h3>
+                <a name="7" href="#head">КАСКАДНОСТЬ СТИЛЕЙ</a>
+            </h3>
+            <section class="sec">
+                <p><span>Каскадность</span> — набор правил, которые определяют последовательность применения стилей и устраняют возникающие между ними конфликты.</p>
+                <p>Определяется тремя параметрами:</p>
+                <ol class="ol4">
+                    <li>Источник стиля</li>
+                    <li>Специфичность селекторов</li>
+                    <li>Исходный порядок</li>
+                </ol>
+                <h4 class="h5">ИСТОЧНИК СТИЛЯ</h4>
+                <div class="sec1">
+                    <p>По возрастанию приоритета стиля в зависимости от источника располагаются следующим образом:</p>
+                    <ol class="ol4">
+                        <li>Стиль пользователя c добавлением !important</li>
+                        <li>Стиль автора c добавлением !important</li>
+                        <li>Стиль пользователя</li>
+                        <li>Стиль автора</li>
+                        <li>Стиль браузера</li>
+                    </ol>
+    <pre>
+        button{
+                —ButtonColor: purple;
+                border: 2px solid var(—buttonColor);
+                color: var(—buttonColor);
+            }      
+    </pre>
+    <pre>
+        :root{ 
+                --primary-color: #007bff;
+            }
+    </pre>
+    <pre>
+        a{ 
+                color: var(--primary-color); 
+            }
+    </pre>
+                </div>
+                <h4 class="h5">СПЕЦИФИЧНОСТЬ</h4>
+                <div class="sec1">
+                    <p>Условная величина определяющая приоритет селектора. Имеет следующие значения:</p>
+                    <ol class="ol4">
+                        <li>Селектор тега = 1</li>
+                        <li>Селектор класса = 10</li>
+                        <li>Селектор идентификатора = 100</li>
+                        <li>Строковый стиль = 1000</li>
+                        <li>Псевдокласс = 10</li>
+                        <li>Псевдоэлемент = 1</li>
+                        <li>Селектор атрибута = 10</li>
+                    </ol>
+                </div>
+            </section>
+            <p class="span3">&sol;*не забывайте про комментарии*&sol;</p>
+        </main>
+        <div class="pred">
+            <a href="lection3.html">&#9668;Предыдущая лекция</a>
+        </div>
+        <div class="sled">
+            <a href="lection5.html">Cледующая лекция &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>
+

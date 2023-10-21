@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lec10\lec10.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <title>ЛЕКЦИЯ 10</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a name="head" href="main.html"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+                </style>
+                <g id="Слой_1">
+                    <g>
+                        <path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+                            c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+                        <path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+                            c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+                        <path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+                        <path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+                    </g>
+                </g>
+                <g id="Слой_2">
+                </g>
+            </svg>
+        </header>
+        <main>
+            <h1 class="h1">ЛЕКЦИЯ 10</h1>
+                <h2>ЯЗЫК XML</h2>
+                <nav>
+                    <ol class="ol1">
+                        <li class="li">
+                            <a href="#1">ОСНОВЫ XML</a>
+                        </li>
+                        <li class="li">
+                            <a href="#2">ПРАВИЛА ДОКУМЕНТОВ XML</a>
+                        </li>
+                        <li class="li">
+                            <a href="#3">СТАНДАРТЫ XML</a>
+                        </li>
+                        <li class="li">
+                            <a href="#4">СХЕМА DTD</a>
+                        </li>
+                        <li class="li">
+                            <a href="#5">XML-СХЕМА</a>
+                        </li>
+                        <li class="li">
+                            <a href="#6">СУЩНОСТИ XML</a>
+                        </li>
+                    </ol>
+                </nav>
+                <h3>ИСТОРИЧЕСКАЯ СПРАВКА</h3>
+                <section class="sec">
+                    <p>Открытый язык разметки (Extensible Markup Language, XML) представляет собой подмножество SGML и полностью описывается в спецификации от 10 февраля 1998 (XML 1.0). Предназначением его является обеспечить обслуживание, получение и обработку общего языка SGML в Web так же, как сейчас это происходит с языком HTML. Язык XML разработан для упрощения реализации и взаимодействия между SGML и HTML</p>
+                    <p>Версия XML 1.1 появилась 29.09.2006 г.</p>
+                </section>
+                <h3>
+                    <a name="1" href="#head">ОСНОВЫ XML</a>
+                </h3>
+                <section class="sec">
+                    <p><span>XML (eXtensible Markup Language)</span> — язык разметки, созданный для хранения, транспортировки и обмена данными между различными системами.</p>
+                    <p>XML — это не исполняемый код, а язык описания данных</p>
+                    <p>Предназначен для:</p>
+                    <ol class="ol3">
+                        <li>Отделения данных от HTML</li>
+                        <li>Упрощения распределение данных</li>
+                        <li>Для обмена данными между программами, написанными на разных языках</li>
+                        <li>Для выгрузки и перезагрузки баз данных</li>
+                    </ol>
+                    <p>XML-документ состоит из элементов, атрибутов, сущностей и инструкций обработки.</p>
+                    <p>Первые строки до корневого элемента называются <span>прологом документа</span> и сообщает о том, что документ XML и какой версии</p>
+                    <img src="lec10\xml.png" alt="xml" class="img1">
+                    <p>Первая строка содержит объявление XML.</p>
+                    <p>Существуют три атрибуты, значения которых могут быть установлены в этом объявлении:</p>
+                    <ul class="ul">
+                        <li>version</li>
+                        <li>encoding</li>
+                        <li>standalone</li>
+                    </ul>
+                    <p>ПРИМЕРЫ:</p>
+                    <p class="span">&lt;?xml version="1.0"?&gt;</p>
+                    <p class="span">&lt;?xml version='1.0' encoding='US-ASCII' standalone='yes'?&gt;</p>
+                    <p class="span">&lt;?xml version = '1.0' encoding= 'iso 8859-1' standalone ="no"?&gt;</p>
+                    <p>Вторая строка содержит объявление типа документа XML.</p>
+                    <p>НАПРИМЕР</p>
+                    <p class="span">&lt;!DOCTYPE корневой элемент [ внутренне подмножество ] &gt;</p>
+                    <p>ИЛИ</p>
+                    <p class="span">&lt;!DOCTYPE note SYSTEM "note.dtd"&gt;</p>
+                    <div class="sec1">
+                        <h5>ЭЛЕМЕНТЫ XML</h5>
+                        <p>XML элементы должны следовать следующим <span>правилам написания имен:</span></p>
+                        <ul class="ul1">
+                            <li class="li">Имена могут содержать буквы, числа и другие символы</li>
+                            <li class="li">Имена не могут начинаться с цифры или символа пунктуации</li>
+                            <li class="li">Имена не могут начинаться с сочетания "xml" (или XML, или Xml и т.п.)</li>
+                            <li class="li">Имена не могут содержать пробельные символы</li>
+                        </ul>
+                    </div>
+                    <div class="sec1">
+                        <h5>АТРИБУТЫ XML</h5>
+                        <p>XML атрибуты могут иметь уникальные имена. Некоторые имена атрибутов зарезервированы рабочей группой XML для специальных целей  использования в XML, и начинаются с префикса <span>xml:</span></p>
+                        <p><span>xml:lang —</span> классифицирует элемент по языку, на котором написано содержимое элемента</p>
+                        <p><span>xml:space —</span> определяет должны ли сохраняться в содержимом пробелы</p>
+                        <p><span>xml:link —</span> сообщает, что элемент является элементом ссылки</p>
+                        <p><span>xml:attribute —</span> позволяет «переназначить» эти специальные атрибуты</p>
+                    </div>
+                </section>
+                <h3>
+                    <a name="2" href="#head">ПРАВИЛА ДОКУМЕНТОВ XML</a>
+                </h3>
+                <section class="sec">
+                    <ol class="ol2">
+                        <li>Все элементы должны иметь закрывающий тег. Если элемент пустой, то</li>
+                    </ol>
+                    <p class="span">&lt;none /&gt;</p>
+                    <ol class="ol2" start="2">
+                        <li class="li">Имена элементов регистрозависимы</li>
+                        <li class="li">XML элементы должны соблюдать корректную вложенность</li>
+                        <li class="li">XML документ должен содержать корневой документ</li>
+                        <li class="li">Значения атрибутов должны заключаться в кавычки</li>
+                        <li class="li">Комментарии можно помещать в любое место документа, но не перед объявлением XML и не внутри тегов; анализатор XML полностью их игнорирует</li>
+                    </ol>
+                </section>
+                <h3>
+                    <a name="3" href="#head">СТАНДАРТЫ XML</a>
+                </h3>
+                <section class="sec">
+                    <p><span>Стандарты XML</span> — это набор расширений, которые придают xml-файлам  дополнительные возможности</p>
+                    <p>Основные расширения XML:</p>
+                    <ol class="ol1">
+                        <li>XSL</li>
+                        <li>XML Shema</li>
+                        <li>RelaxNG</li>
+                        <li>Schemarton</li>
+                        <li>SAX</li>
+                        <li>XSLT</li>
+                        <li>Xpath</li>
+                        <li>SVG</li>
+                        <li>Xlinks</li>
+                        <li>Xpoiner</li>
+                        <li>AJAX</li>
+                    </ol>
+                </section>
+                <h3>
+                    <a name="4" href="#head">СХЕМА DTD</a>
+                </h3>
+                <section class="sec">
+                    <p><span>Document Type Definition (DTD)</span> — это язык описания структуры XML-документа, который используется для проверки грамматики XML-документа и его соответствия определенному</p>
+                    <p>DTD описывает:</p>
+                    <ul class="ul1">
+                        <li class="li">Какие элементы могут присутствовать в документе</li>
+                        <li class="li">Вхождение элементов (повторения и т.п.)</li>
+                        <li class="li">Возможные атрибуты элементов</li>
+                        <li class="li">Обязательные / необязательные атрибуты</li>
+                        <li class="li">PCDATA и CDATA</li>
+                        <li class="li">Применяемые в документе сущности</li>
+                    </ul>
+                    <div class="sec1">
+                        <h5>ИНСТРУКЦИИ DTD</h5>
+                        <p>Инструкция <span>ATTLIST</span> используется для перечисления и объявления всех атрибутов, которые могут принадлежать элементу. Сначала указывается имя элемента (или элементов), к которому относится список атрибутов. Затем для всех атрибутов по очереди указывается имя, обязательность и символьные данные, допустимые в качестве значения.</p>
+                        <p class="span">&lt;!ATTLIST имя-элемента имя-атрибута тип-атрибута значение-атрибута&gt;</p>
+                        <h5>ТИПЫ АТРИБУТА DTD</h5>
+                        <ul class="ul1">
+                            <li class="class"><span>CDATA</span> – атрибут содержит только символьные данные</li>
+                            <li class="li"><span>ID</span> – значение атрибута должно быть уникальным. Оно не может повторяться в других элементах или атрибутах данного документа</li>
+                            <li class="li"><span>IDREF</span> – атрибут ссылается на значение другого атрибута типа ID из данного документа</li>
+                            <li class="li"><span>ENTITY</span> – значение атрибута должно соответствовать имени внешней сущности  ENTITY, не подвергавшейся синтаксическому разбору и объявленной в том же определении DTD</li>
+                            <li class="li"><span>ENTITIES</span> – значение атрибута содержит несколько имен внешних сущностей, не подвергавшихся синтаксическому разбору и объявленных в том же определении DTD</li>
+                            <li class="li"><span>NMTOKEN</span> – значение атрибута должно быть лексемой имени. Токены имени допускают символьные значения данных, но накладывают больше ограничений, чем тип CDATA. Лексема имени может содержать буквы, цифры и некоторые знаки препинания  —  точки, тире, символы</li>
+                        </ul>
+                        <div class="sec2">
+                            <h6>ЗНАЧЕНИЕ АТРИБУТА DTD</h6>
+                            <img src="lec10\dtd.png" alt="dtd" class="img3">
+                            <h6>ПРИМЕРЫ</h6>
+                            <p class="span">&lt;!ATTLIST sender company CDATA #FIXED "Microsoft"&gt;</p>
+                            <p class="span">&lt;sender company="Microsoft"/&gt;</p>
+                            <br>
+                            <p class="span">&lt;!ATTLIST payment type (check|cash) "cash"&gt;</p>
+                            <p class="span">&lt;payment type="check"/&gt;</p>
+                            <p class="span">&lt;payment type="cash"/&gt;</p>
+                            <img src="lec10\example.png" alt="example" class="img3">
+                        </div>
+                    </div>
+                    <div class="sec1">
+                        <h5>ИНСТРУКЦИЯ ELEMENT</h5>
+                        <p>Инструкция <span>ELEMENT</span> применяется для объявления каждого элемента, который используется внутри типа документа, определенного в DTD. Сначала инструкция объявляет имя элемента, а затем определяет, какое содержимое допустимо в элементе</p>
+                        <p class="span">&lt;!ELEMENT имя элемента  категория&gt;</p>
+                        <p class="span">&lt;!ELEMENT имя элемента (содержимое-элемента)&gt;</p>
+                        <div class="sec2">
+                            <h5>КАТЕГОРИИ ELEMENT</h5>
+                            <p><span>EMPTY</span> в элементе не допускается содержимое, он должен оставаться пустым</p>
+                            <p><span>ANY</span> внутри элемента допускается любое содержимое</p>
+                            <h6>ПРИМЕРЫ</h6>
+                            <ul class="ul">
+                                <li>&lt;!ELEMENT br EMPTY&gt;</li>
+                                <li>&lt;!ELEMENT note ANY&gt;</li>
+                                <li>&lt;!ELEMENT note (to,from,heading,body)&gt;</li>
+                                <li>&lt;!ELEMENT to (#PCDATA)&gt;</li>
+                                <li>&lt;!ELEMENT from (#PCDATA)&gt;</li>
+                                <li>&lt;!ELEMENT heading (#PCDATA)&gt;</li>
+                                <li>&lt;!ELEMENT body (#PCDATA)&gt;</li>
+                            </ul>
+                            <p class="span">&lt;!ELEMENT para (#PCDATA | emphasis | person)* &gt;</p>
+                            <p><span>&lt;para&gt;</span> And so, <span>&lt;person&gt;</span>Tom Swift<span>&lt;/person&gt;</span>  climbed back into his aeroplane to make ready for departure. However, he noticed a strong smell of gasoline, and realized he was <span>&lt;emphasis&gt;</span>really<span>&lt;/emphasis&gt;</span> in trouble! It was like &episode 6; all over again!<span>&lt;/para&gt;</span></p>
+                            <br>
+                            <p class="span">&lt;!ELEMENT article 
+                                (title, subtitle?, author*, (para | table | list)+, bibliography?) ></p>
+                            <p>Возможные варианты элемента <span>article</span>:</p>
+                            <ul class="ul1">
+                                <li class="li">title, subtitle, author, para, para, para</li>
+                                <li class="li">title, author, author, para, list, para, table, para, bibliography</li>
+                                <li class="li">title, list, list, list, bibliography</li>
+                                <li class="li">title, subtitle, table, para
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sec1">
+                        <h5>ИНСТРУКЦИЯ NOTATION</h5>
+                        <p>Инструкция NOTATION используется для определения нотаций. Нотации позволяют XML-документу передавать внешним приложениям уведомляющие сведения.</p>
+                        <p class="span">&lt;!NOTATION name identifier&gt;</p>
+                        <img src="lec10\notation.png" alt="notation" class="img2">
+                    </div>
+                    <div class="sec1">
+                        <h5>ИНСТРУКЦИЯ ENTITY</h5>
+                        <p>Инструкция ENTITY используется для определения сущностей в DTD с целью их использования как в связанном с DTD XML-документе, так и собственно в DTD. ENTITY представляет собой сокращенную запись для размещения в XML-документе. Сокращенное имя указывается для имени параметра. Инструкции ENTITY особенно полезны в ситуациях, когда требуется повторять сведения или использовать объемные текстовые блоки, которые можно хранить в отдельных файлах.</p>
+                    </div>
+                </section>
+                <h3>
+                    <a name="5" href="#head">XML-СХЕМА</a>
+                </h3>
+                <section class="sec">
+                    <p><span>XML-схема</span> - это основанная на XML современная альтернатива DTD, описывающая структуру XML-документа, в том числе:</p>
+                    <ul class="ul1">
+                        <li class="li">Определяет элементы, которые могут появляться в документе</li>
+                        <li class="li">Определяет атрибуты, которые могут появляться в документе</li>
+                        <li class="li">Определяет, какие элементы являются дочерними</li>
+                        <li class="li">Определяет последовательность, в которой появляются дочерние элементы</li>
+                        <li class="li">Определяет число дочерних элементов</li>
+                        <li class="li">Определяет пустой ли элемент или он может включать в себя текст</li>
+                        <li class="li">Определяет типы данных элементов и атрибутов</li>
+                        <li class="li">Определяет значения атрибутов по умолчанию</li>
+                    </ul>
+                    <p>Преимущества XML Schema</p>
+                    <ol class="ol2">
+                        <li>XML схемы легко расширяются</li>
+                        <li>XML схемы пишутся на XML</li>
+                        <li>XML схемы поддерживают типы данных</li>
+                        <li>XML схемы поддерживают пространства имен</li>
+                    </ol>
+                    <img src="lec10\schema.png" alt="schema" class="img1">
+                    <img src="lec10\schema1.png" alt="schema" class="img1">
+                    <h6>ЭЛЕМЕНТЫ XML SCHEMA</h6>
+                    <img src="lec10\elements.png" alt="schema" class="img1">
+                    <div class="sec1">
+                        <h5>ВАЛИДНЫЕ ДОКУМЕНТЫ XML</h5>
+                        <p><span>Первое правило</span> для валидного XML документа то, что он должен быть синтаксически верным.</p>
+                        <p><span>Второе правило</span> — валидный XML документ должен соответствовать определенному типу документов.</p>
+                    </div>
+                </section>
+                <h3>
+                    <a name="6" href="#head">СУЩНОСТИ XML</a>
+                </h3>
+                <section class="sec">
+                    <p><span>СУЩНОСТЬ (entity)</span> является заместителем содержания, которую можно однажды объявить и многократно использовать почти в любом месте документа</p>
+                    <p>Существует два вида синтаксиса ссылок на сущности. Первый, состоящий из амперсанда (&), имени сущности и точки с запятой (;), применяется для общих сущностей.</p>
+                    <p class="span">&w3c;</p>
+                    <p>Второй синтаксис, отличающийся использованием знака процента (%) вместо амперсанда, предназначен для параметрических сущностей</p>
+                    <img src="lec10\xml1.png" alt="schema" class="img1">
+                    <p class="span">%name</p>
+                    <h5>ВСТРОЕННЫЕ ПРЕДОПРЕДЕЛЕННЫЕ СУЩНОСТИ XML</h5>
+                    <img src="lec10\vstr.png" alt="schema" class="img1">
+                    <h5>ВНЕШНИЕ СУЩНОСТИ XML</h5>
+                    <img src="lec10\vneshn.png" alt="schema" class="img1">
+                    <h6>КОММЕНТАРИИ XML</h6>
+                    <img src="lec10\com.png" alt="schema" class="img1">
+                    <div class="sec1">
+                        <h5>РАСШИРЕНИЕ XSLT</h5>
+                        <p>XSL состоит из четырех частей:</p>
+                        <p>XSLT — язык преобразования XML документов</p>
+                        <p>XPath — язык для навигации по элементам XML документа</p>
+                        <p>XSL-FO — язык для форматирования XML документов (разработка остановлена в 2013 году)</p>
+                        <p>XQuery — язык, позволяющий делать выборки из XML данных</p>
+                        <p>XSLT  (eXtensible  Stylesheet  Language  Transformations)  -  это декларативное описание преобразования (трансформации) любого XML-документа. Спецификация XSLT входит в состав XSL и является рекомендацией W3C.</p>
+                        <p>Для объявления таблицы XSLT используется корневой элемент &lt;xsl:stylesheet&gt;</p>
+                        <p class="span">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;</p>
+                        <img src="lec10\xslt.png" alt="xslt" class="img2">
+                    </div>
+                </section>
+                <p class="span3">&lt;!-- Это лекция была про XML и XSLT --&gt;</p>
+        </main>
+        <div class="pred">
+            <a href="lection9.html">&#9668;Предыдущая лекция</a>
+        </div>
+        <div class="sled">
+            <a href="lection11.html">Cледующая лекция &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

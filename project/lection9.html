@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lec9\lec9.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css" />
+        <title>ЛЕКЦИЯ 9</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a name="head" href="main.html"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+                </style>
+                <g id="Слой_1">
+                    <g>
+                        <path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+                            c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+                        <path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+                            c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+                        <path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+                        <path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+                    </g>
+                </g>
+                <g id="Слой_2">
+                </g>
+            </svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛЕКЦИЯ 9</h1>
+                <h2>МЕТАЯЗЫК SASS</h2>
+                <nav>
+                    <ol class="ol1">
+                        <li class="li">
+                            <a href="#1">ОСНОВЫ SASS</a>
+                        </li>
+                        <li class="li">
+                            <a href="#2">ПЕРЕМЕННЫЕ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#3">ВЛОЖЕННЫЕ ПРАВИЛА</a>
+                        </li>
+                        <li class="li">
+                            <a href="#4">ПРИМЕСИ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#5">ОПЕРАТОРЫ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#6">ФУНКЦИИ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#7">ДИРЕКТИВЫ</a>
+                        </li>
+                    </ol>
+                </nav>
+                <h3>
+                    <a name="1" href="#head">ОСНОВЫ SASS</a>
+                </h3>
+                <section class="sec">
+                    <p><span>SASS</span> расшифровывается как <span>Syntactically Awesome Style Sheets</span> и переводится «синтаксически привлекательные таблицы стилей»</p>
+                    <p>Препроцессор — программа, имеющий собственный синтаксис, который затем компилируется в стандартный CSS-код</p>
+                    <p><span>SASS</span> — это препроцессор СSS, который представляет собой метаязык на основе CSS, предназначенный для расширения возможностей CSS и упрощения каскадных таблиц стилей</p>
+                    <h5>ПРЕИМУЩЕСТВА SASS</h5>
+                    <ol class="ol2">
+                        <li class="li">Совместимость с различными версиями CSS</li>
+                        <li class="li">Функуиональность</li>
+                        <li class="li">Позволяет использовать конструкции из программирования для разработки кода CSS</li>
+                        <li class="li">Совместимость с CSS-фреймворками</li>
+                        <li class="li">Организация СSS-кода в файлы меньшего размера</li>
+                        <li class="li">Устранение трудностей связанных с обновлением свойств</li>
+                        <li class="li">Уменьшение размера кода</li>
+                    </ol>
+                    <div class="sec1">
+                        <h5>УСТАНОВКА SASS</h5>
+                        <p>Sass создается на языке Ruby. Перед использованием необходима установка среды разработки Ruby:</p>
+                        <ol class="ol3">
+                            <li>Загрузить установочный пакет Ruby с сайта <span>rubyinstaller.org/downloads/</span></li>
+                            <li>Запустите установочный файл</li>
+                            <li>После завершения установки нажать кнопку Finish(Готово) в последнем диалоговом окне</li>
+                            <li>Запустить приложение командной строки</li>
+                            <li>Ввести команду gem install sass</li>
+                            <li>Ввести сd “Путь к папке с файлом .scss”</li>
+                            <li>Затем ввести “D:”, т.е. диск, где находится папка с вашим файлом</li>
+                            <li>Ввести команду sass --watch sass:css</li>
+                        </ol>
+                        <img src="lec9\inst1.png" alt="install" class="img2">
+                        <p>ОТКРЫТЬ WIN + R</p>
+                        <img src="lec9\inst2.png" alt="install" class="img3">
+                        <img src="lec9\inst3.png" alt="install" class="img2">
+                        <img src="lec9\inst4.png" alt="install" class="img2">
+                        <h6>УСТАНОВКА РАСШИРЕНИЯ</h6>
+                        <img src="lec9\inst5.png" alt="install" class="img2">
+                        <img src="lec9\inst6.png" alt="install" class="img2">
+                        <img src="lec9\inst7.png" alt="install" class="img2">
+                        <img src="lec9\inst8.png" alt="install" class="img2">
+                        <img src="lec9\inst9.png" alt="install" class="img2">
+                        <img src="lec9\inst10.png" alt="install" class="img2">
+                        <div class="div">
+                            <h5>SASS</h5>
+                            <img src="lec9\sass.png" alt="sass" class="img4">
+                        </div>
+                        <div class="div">
+                            <h5>SCSS</h5>
+                            <img src="lec9\scss.png" alt="scss" class="img4">
+                        </div>
+                    </div>
+                    <p>CSS/Sass-правила можно разделить на несколько файлов, а затем объединить их в один CSS-файл. Чтобы сообщить препроцессору Sass, что вы нехотите преобразовывать эти фрагменты в отдельные CSS-файлы, их имена должны начинаться с символа подчеркивания (_)</p>
+                    <p>Чтобы скомпилировать в итоговый файл определенный фрагмент используется:</p>
+                    <p class="span">@import '_style.scss';</p>
+                    <img src="lec9\sass1.png" alt="sass" class="img1">
+                    <p>Если требуется создать одиночный CSS-файл с именем styles.css. Для этого можно использовать Sass-файл с именем styles.scss и поместить его в папку sass и он содержит несколько фрагментов</p>
+                    <ul class="ul">
+                        <li><span>@import</span> '_first.scss';</li>
+                        <li><span>@import</span> '_second.scss';</li>
+                        <li><span>@import</span> '_third.scss';</li>
+                        <li class="li1">ИЛИ</li>
+                        <li><span>@import</span> 'first';</li>
+                        <li><span>@import</span> 'second';</li>
+                        <li><span>@import</span> 'third';</li>
+                    </ul>
+                </section>
+                <h3>
+                    <a name="2" href="#head">ПЕРЕМЕННЫЕ</a>
+                </h3>
+                <section class="sec">
+                    <p><span>Переменная</span> — атрибут, которому присвоено значение которое может изменяться</p>
+                    <p>Синтаксис:</p>
+                    <p class="span"><span>$имя переменной:</span> значение;</p>
+                    <img src="lec9\perem.png" alt="sass" class="img2">
+                    <img src="lec9\perem1.png" alt="perem1" class="img1">
+                </section>
+                <h3>
+                    <a name="3" href="#head">ВЛОЖЕННЫЕ ПРАВИЛА</a>
+                </h3>
+                <section class="sec">
+                    <img src="lec9\rules.png" alt="rules" class="img1">
+                    <img src="lec9\rules1.png" alt="rules" class="img1">
+                    <p class="span">Символ амперсанд заменяется родительским</p>
+                    <img src="lec9\rules2.png" alt="rules" class="img1">
+                    <h5>НАСЛЕДОВАНИЕ SASS</h5>
+                    <img src="lec9\nasled.png" alt="nasledovamie" class="img1">
+                </section>
+                <h3>
+                    <a name="4" href="#head">ПРИМЕСИ</a>
+                </h3>
+                <section class="sec">
+                    <p><span>Примеси (миксины)</span> — мини-программы, которые представляют собой ссылки на группу объявления свойств применяемые далее многократное количество раз</p>
+                    <img src="lec9\prim.png" alt="mix" class="img1">
+                </section>
+                <h3>
+                    <a name="5" href="#head">ОПЕРАТОРЫ</a>
+                </h3>
+                <section class="sec">
+                <img src="lec9\op.png" alt="op" class="img1">
+                <img src="lec9\op1.png" alt="op" class="img1">
+                <img src="lec9\op2.png" alt="op" class="img1">
+                <img src="lec9\op3.png" alt="op" class="img1">
+                </section>
+                <h3>
+                    <a name="6" href="#head">ФУНКЦИИ</a>
+                </h3>
+                <section class="sec">
+                    <p><span>Функция</span> — отношение между элементами, при котором изменение в одном элементе влечёт изменение в другом</p>
+                <img src="lec9\func.png" alt="op" class="img1">
+                </section>
+                <h3>
+                    <a name="7" href="#head">ДИРЕКТИВЫ</a>
+                </h3>
+                <section class="sec">
+                    <div class="sec1">
+                        <h5>ДИРЕКТИВА @for</h5>
+                        <img src="lec9\for.png" alt="for" class="img2">
+                    </div>
+                    <div class="sec1">
+                        <h5>ДИРЕКТИВА @each</h5>
+                        <img src="lec9\each.png" alt="each" class="img2">
+                    </div>
+                    <div class="sec1">
+                        <h5>ДИРЕКТИВА @while</h5>
+                        <img src="lec9\while.png" alt="each" class="img2">
+                    </div>
+                </section>
+        </main>
+        <div class="pred">
+            <a href="lection08.html">&#9668;Предыдущая лекция</a>
+        </div>
+        <div class="sled">
+            <a href="lection10.html">Cледующая лекция &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

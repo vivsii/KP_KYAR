@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lab\lab13.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <title>ЛАБОРАТОРНАЯ 13</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a href="main.html" name="head"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+				</style>
+				<g id="Слой_1">
+					<g>
+						<path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+							c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+						<path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+							c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+						<path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+						<path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+					</g>
+				</g>
+				<g id="Слой_2">
+				</g>
+			</svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛАБОРАТОРНАЯ 13</h1>
+            <h2>РАСШИРЕНИЕ XSLT</h2>
+            <nav>
+                <ul class="ul">
+                    <li class="li">
+                        <a href="#1">ТЕОРЕТИЧЕСКИЕ СВЕДЕНИЯ</a>
+                        <ol>
+                            <li><a href="#2">ПОНЯТИЕ XSL</a></li>
+                            <li><a href="#3">РАСШИРЕНИЕ XSLT</a></li>
+                        </ol>
+                    </li>
+                    <li class="li">
+                        <a href="#4">ЗАДАНИЯ К РАБОТЕ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#5">КОНТРОЛЬНЫЕ ВОПРОСЫ</a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="p"><span class="span">ЦЕЛЬ РАБОТЫ:</span> познакомиться с блочной моделью, изучить свойства блочных элементов</p>
+            <h2><a name="1" href="#head">Теоретические сведения для выполнения работы</a></h2>
+            <section class="sec">
+                <h3><a href="#head" name="2">ПОНЯТИЕ XSL</a></h3>
+                <p>XSL (eXtensible Stylesheet Language) —язык таблиц стилей для XML. XSL служит языком трансформирования документов XML и состоит из XML-словаря семантики форматирования. Имея класс произвольно структурированных XML-документов и файлов данных, дизайнеры используют таблицы стилей XSL для указания на то, как это структурированное содержимое должно быть представлено; как содержимое-источник должно быть стилизовано, расположено и разбито на странице в Web-браузере.</p>
+                <p>Процессор таблицы стилей XSL принимает документ или данные на языке XML и таблицу XSL и производит представление содержимого XML-источника так, как это задумано дизайнером данной таблицы стилей. Существуют два аспекта этого процесса представления: первый — конструирование результирующего дерева из дерева XML-источника, второй — интерпретация результирующего дерева для производства форматированного вывода, пригодного для показа на экране дисплея. Первый аспект называется трансформация дерева, а второй называется форматирование. Процесс форматирования выполняется форматировщиком. Этот форматировщик может быть утилитой вывода браузера.</p>
+                <p>Форматирование становится доступным при включении семантики форматирования в результирующее дерево. Семантика форматирования выражена в терминах каталога классов объектов форматирования. Узлы результирующего дерева это объекты форматирования. Классы объектов форматирования обозначают типографические абстракции, например такие как страница, параграф, таблица. Точный контроль за представлением этих абстракций осуществляется с помощью набора свойств форматирования, таких как управление отступами, расстояниями между словами и буквами, висячими строками и переносами. XSL классы объектов форматирования и свойства форматирования предоставляют словарь для выражения целей представления.</p>
+                <p>Имеются 4 класса свойств XSL, которые можно идентифицировать как:</p>
+                <ol>
+                    <li> Свойства, скопированные из CSS (с неизмененной семантикой CSS2).</li>
+                    <li>Свойства CSS с расширенными значениями.</li>
+                    <li>Свойства CSS, разбитые на части и/или расширенные.</li>
+                    <li>"Чистые" свойства XSL.</li>
+                </ol>
+                <p>Процессоры XSL обязаны использовать механизмы пространства имен XML Names для распознавания элементов и атрибутов пространства имен <span>http://www.w3.org/1999/XSL/Format</span>.</p>
+                <p>Элементы из пространства имен XSL распознаются только в таблицах стилей, но не в документе-источнике. Разработчики обязаны не расширять пространство имен XSL за счет дополнительных элементов и атрибутов. Вместо этого любое расширение обязано находиться в отдельном пространстве имен.</p>
+                <p>Спецификация XSL использует префикс fo: для ссылки на элементы пространства имен XSL. В то же время таблицы стилей XSL могут использовать любые префиксы при наличии объявления пространства имен, связывающего префикс с URL пространства имен XSL. Спецификация XSL размещена по адресу <span>https://www.w3.org/TR/2001/REC-xsl-20011015/</span>, в которой представлены свойства и примеры использования префиксов, используемые в XSL.</p>
+                <p>Следует отметить, что XSL использует XSLT и XPath для конструирования дерева отбора патернов, предоставляя таким образом возможности управления тем, как представлены части содержимого-источника и какие свойства ассоциированы с этими частями содержимого, где используются смешанные пространства имен. XSLT определяет набор примитивов для описания преобразования документа, а XPath определяет синтаксис описания различных мест в документах XML.</p>
+                <h3><a href="#head" name="3">РАСШИРЕНИЕ XSLT</a></h3>
+                <p>XSLT (eXtensible Stylesheet Language Transformations) — это декларативное описание преобразования (трансформации) любого XML-документа. Спецификация XSLT входит в состав XSL и является рекомендацией W3C</p>
+                <p>Существует три основных способа преобразования XMLдокументов с помощью XSLT в другие форматы, например, в HTML:</p>
+                <ol>
+                    <li>XML-документ и связанная с ним таблица стилей отправляются клиенту (веб-браузеру), который преобразует документ как указано в таблице стилей и затем предоставляет результат преобразования пользователю.</li>
+                    <li>Сервер применяет таблицу стилей XSLT к XML-документу и преобразует его в другой формат (обычно, в HTML). После этого результат отправляется клиенту (веб-браузеру).</li>
+                    <li>Какая-то программа преобразует оригинальный XMLдокумент в другой формат (обычно, в HTML), затем результат помещается на сервер. Таким образом, сервер и клиент имеет дело  преобразованным документом</li>
+                </ol>
+                <p>При помощи XSLT можно добавлять/удалять элементы и атрибуты в конечный файл. Также, можно реорганизовывать и сортировать элементы, выполнять тесты, определять, какие элементы скрыть или отобразить, и т. п. Таблица стилей XSL содержит один или больше наборов правил преобразования, которые называются шаблонами преобразования. Шаблон преобразования содержит правила, которые применяются, когда найден узел (элемент, атрибут, текст, комментарий), соответствующий условию поиска. Пример использования XSLT представлен в таблице</p>
+                <table>
+                    <caption>Расширение XSLT</caption>
+                    <tr>
+                        <th>XML-документ</th>
+                        <th>XSLT</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;?xml version="1.0" encoding="UTF-8"?><br>&lt;?xml-stylesheet type="text/xsl" href="catalog.xsl"?><br>&lt;catalog><br>&emsp;&lt;cd><br>&emsp;&emsp;&lt;title>Empire Burlesque&lt;/title><br>&emsp;&emsp;&lt;artist>Bob Dylan&lt;/artist><br>&emsp;&emsp;&lt;country>USA&lt;/country><br>&emsp;&emsp;&lt;company>Columbia&lt;/company><br>&emsp;&emsp;&lt;price>10.90&lt;/price><br>&emsp;&emsp;&lt;year>1985&lt;/year><br>&emsp;&lt;/cd><br>&emsp;&lt;cd><br>&emsp;&emsp;&lt;title>Hide your heart&lt;/title><br>&emsp;&emsp;&lt;artist>Bonnie Tyler&lt;/artist><br>&emsp;&emsp;&lt;country>UK&lt;/country><br>&emsp;&emsp;&lt;company>CBS Records&lt;/company><br>&emsp;&emsp;&lt;price>9.90&lt;/price><br>&emsp;&emsp;&lt;year>1988&lt;/year><br>&emsp;&lt;/cd><br>&lt;/catalog></td>
+                        <td>&lt;?xml version="1.0" encoding="UTF-8"?><br>&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><br>&lt;xsl:template match="/"><br>&lt;html><br>&emsp;&lt;head><br>&emsp;&lt;title>My first template rule&lt;/title><br>&emsp;&lt;/head><br>&emsp;&lt;body><br>&emsp;&emsp;&lt;h2>My CD Collection&lt;/h2><br>&emsp;&emsp;&lt;table border="1"><br>&emsp;&emsp;&emsp;&lt;tr bgcolor="#9acd32"><br>&emsp;&emsp;&emsp;&emsp;&lt;th>Title&lt;/th><br>&emsp;&emsp;&emsp;&emsp;&lt;th>Artist&lt;/th><br>&emsp;&emsp;&emsp;&lt;/tr><br>&emsp;&emsp;&emsp;&lt;xsl:for-each select="catalog/cd"><br>&emsp;&emsp;&emsp;&lt;xsl:sort select="artist"/><br>&emsp;&emsp;&emsp;&lt;tr><br>&emsp;&emsp;&emsp;&emsp;&lt;td>&lt;xsl:value-of select="title"/>&lt;/td><br>&emsp;&emsp;&emsp;&emsp;&lt;td>&lt;xsl:value-of select="artist"/>&lt;/td><br>&emsp;&emsp;&emsp;&lt;/tr><br>&emsp;&emsp;&emsp;&lt;/xsl:for-each><br>&emsp;&emsp;&lt;/table><br>&emsp;&lt;/body><br>&lt;/html><br>&lt;/xsl:template><br>&lt;/xsl:stylesheet></td>
+                    </tr>
+                </table>
+                <p>Приведенный пример трактуется следующим образом:</p>
+                <ol>
+                    <li><span>&lt;xsl:stylesheet></span> определяет, что данный документ является таблицей стилей XSLT с атрибутами номера версии и пространства имен XSLT.</li>
+                    <li><span>&lt;xsl:output></span> выбирает HTML как выходной формат,</li>
+                    <li><span>&lt;xsl:template></span> указывает, как должны преобразовываться части документа XML. Значение «/» атрибут match используется, чтобы определить шаблон для всего XML документа целиком.</li>
+                    <li><span>&lt;xsl:value-of></span> используется для извлечения значения отобранного XML элемента и добавления его в выходной поток преобразовываемого документа.</li>
+                    <li><span>&lt;xsl:for-each></span> может использоваться для выбора каждого XML элемента заданного узлового набора</li>
+                    <li><span>&lt;xsl:sort></span> используется для сортировки выходных данных и располагается внутри элемента <span>&lt;xsl:for-each></span></li>
+                </ol>
+                <p>Также могут быть использованы следующие элементы:</p>
+                <ol>
+                    <li><span>&lt;xsl:apply-templates></span> применяет некий шаблон к текущему элементу или к дочернему узлу текущего элемента. Если в элемент <span>&lt;xsl:apply-templates></span> добавить атрибут <i><span>select</span></i>, то он будет относиться только к дочернему элементу, который соответствует значению этого атрибута и может использоваться для определения порядка, в котором будут обрабатываться дочерние узлы.</li>
+                    <li><span>&lt;xsl:choose></span> используется вместе с элементами <span>&lt;xsl:when></span> и <span>&lt;xsl:otherwise></span>, чтобы определить проверку на выполнение условия. Пример использования элемента выбора с условием представлен на рис. ниже. Согласно примеру, если условие выполняется, то ячейка будет выделена цветом <span>#ff00ff</span>.</li>
+                </ol>
+                <p class="div">&lt;xsl:for-each select="catalog/cd"><br>&emsp;&lt;tr><br>&emsp;&emsp;&lt;td>&lt;xsl:value-of select="title"/>&lt;/td><br>&emsp;&emsp;&lt;xsl:choose><br>&emsp;&emsp;&emsp;&lt;xsl:when test="price &amp;gt; 10"><br>&emsp;&emsp;&emsp;&emsp;&lt;td bgcolor="#ff00ff"><br>&emsp;&emsp;&emsp;&emsp;&emsp;&lt;xsl:value-of select="artist"/><br>&emsp;&emsp;&emsp;&emsp;&lt;/td><br>&emsp;&emsp;&emsp;&lt;/xsl:when><br>&emsp;&emsp;&emsp;&lt;xsl:otherwise><br>&emsp;&emsp;&emsp;&emsp;&lt;td>&lt;xsl:value-of select="artist"/>&lt;/td><br>&emsp;&emsp;&emsp;&lt;/xsl:otherwise><br>&emsp;&emsp;&lt;/xsl:choose><br>&emsp;&lt;/tr><br>&lt;/xsl:for-each></p>
+                <p>К атрибутам элемента &lt;xsl:sort> относятся:</p>
+                <ul>
+                    <li><i><span>select</span></i> — обязательный атрибут, значением которого является выражение, называемое также ключевым выражением. Это выражение вычисляется для каждого узла обрабатываемого множества, преобразуется в строку и затем используется как значение ключа при сортировке. По умолчанию значением этого атрибута является ".", что означает, что в качестве значения ключа для каждого узла используется его строковое значение;</li>
+                    <li><i><span>order</span></i> – необязательный атрибут, определяет порядок, в котором узлы должны сортироваться по своим ключам. Этот атрибут может принимать только два значения – "<i>ascending</i>", указывающее на восходящий порядок сортировки, и "<i>descending</i>", указывающее на нисходящий порядок. Значением по умолчанию является "ascending", то есть восходящий порядок;</li>
+                    <li><i><span>lang</span></i> – необязательный атрибут, определяет язык ключей сортировки. В разных языках символы алфавита могут иметь различный порядок, что, соответственно, должно учитываться при сортировке. Атрибут <i><span>lang</span></i> в XSLT может иметь те же самые значения, что и атрибут xml:lang (например: "en", "en-us", "ru" и т. д.). Если значение этого атрибута не определено, процессор может либо определять язык исходя из параметров системы, либо сортировать строки исходя из порядка кодов символов Unicode;</li>
+                    <li><i><span>data-type</span></i> – необязательный атрибут, определяет тип данных, которые несут строковые значения ключей.</li>
+                </ul>
+                <p>Все атрибуты элемента <i><span>xsl:sort</span></i> должны обладать фиксированными значениями.</p>
+            </section>
+            <h2><a href="#head" name="4">Задания к лабораторной работе № 13</a></h2>
+            <section class="sec1">
+                <p><span>Задание 1</span> Оформите задание 1 лабораторной работы № 11 через подключение XSLT с сортировкой по возрастанию.</p>
+                <p><span>Задание 2</span> Создайте новый XML-документ, в котором должна быть информация об аттестации студентов, преобразовав с помощью XSLT в таблицу с условием, при котором ячейки с оценками ниже 4 должны быть выделены красным фоном, а оценки выше 8 зеленым фоном.</p>
+            </section>
+            <section class="sec">
+                <h2><a href="#head" name="5">Контрольные вопросы</a></h2>
+                <ol class="ol">
+                    <li class="li">Что такое XSL? Чем является XSLT?</li>
+                    <li class="li">Каково основное назначение технологии XSLT?</li>
+                    <li class="li">Для чего предназначен &lt;xsl:template>?</li>
+                    <li class="li">Что означает значение match="/"?</li>
+                    <li class="li">Как подключить XSLT к xml?</li>
+                    <li class="li">Для чего предназначено &lt;xsl:stylesheet>?</li>
+                    <li class="li">Что означает &lt;xsl:apply-templates>?</li>
+                    <li class="li">Для чего и какие атрибуты имеет &lt;xsl:sort>?</li>
+                    <li class="li">С помощью какого элемента можно осуществить сортировку с условиями?</li>
+                    <li class="li">Для чего используется элемент &lt;xsl:otherwise>?</li>
+                    <li class="li">В чем заключается предназначение &lt;xsl:when>?</li>
+                    <li class="li">Что относится к XSL?</li>
+                    <li class="li">Как строятся шаблоны преобразований в XSLT?</li>
+                    <li class="li">Каков алгоритм преобразования XML-документа с помощью языка XSLT?</li>
+                    <li class="li">Для чего предназначено &lt;xsl:value-of>?</li>
+                    <li class="li">Для чего используются <xsl:for-each>? Какие элементы XSL могут быть внутри него?</li>
+                </ol>
+            </section>
+        </main>
+        <div class="pred">
+            <a href="lab12.html">&#9668;Предыдущая лабораторная</a>
+        </div>
+        <div class="sled">
+            <a href="lab14.html">Cледующая лабораторная &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() { 
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

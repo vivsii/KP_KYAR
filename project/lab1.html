@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lab\lab1.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <title>ЛАБОРАТОРНАЯ 1</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a href="main.html" name="head"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+				</style>
+				<g id="Слой_1">
+					<g>
+						<path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+							c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+						<path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+							c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+						<path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+						<path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+					</g>
+				</g>
+				<g id="Слой_2">
+				</g>
+			</svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛАБОРАТОРНАЯ 1</h1>
+            <h2>ОСНОВНЫЕ ТЕГИ HTML</h2>
+            <nav>
+                <ul class="ul">
+                    <li class="li">
+                        <a href="#1">ТЕОРЕТИЧЕСКИЕ СВЕДЕНИЯ</a>
+                        <ol>
+                            <li><a href="#2">ТЕГИ СПИСКОВ</a></li>
+                            <li><a href="#3">ТЕГИ ТАБЛИЦ</a></li>
+                            <li><a href="#4">ТЕГИ СОЗДАНИЯ ВЕБ-ФОРМ</a></li>
+                            <li><a href="#5">ТЕГ &lt;div&gt;</a></li>
+                            <li><a href="#6">ТЕГ &lt;span&gt;</a></li>
+                            <li><a href="#7">СЕМАНТИЧЕСКИЕ ТЕГИ</a></li>
+                        </ol>
+                    </li>
+                    <li class="li">
+                        <a href="#8">ЗАДАНИЯ К РАБОТЕ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#9">КОНТРОЛЬНЫЕ ВОПРОСЫ</a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="p"><span class="span">ЦЕЛЬ РАБОТЫ:</span> изучить структуру HTML документа и использование основных тегов и атрибутов</p>
+            <h2><a name="1" href="#head">Теоретические сведения для выполнения работы</a></h2>
+            <section class="sec">
+                <p><span>HTML (Hyper Text Markup Language)</span> – язык разметки гипертекста. Для разметки HTML документа используют теги (флаги разметки)</p>
+                <p><span>Тег</span> – это определенная последовательность символов, заключенные между знаками < (больше) и > (меньше)</p>
+                <p>Для того, чтобы создать HTML документ необходимо:</p>
+                <p>&mdash;открыть HTML-редактор (например, Visual Studio Code);</p>
+                <p>&mdash;набрать произвольный текст и разметить между HTML тегами;</p>
+                <p>&mdash;сохранить файл с расширением .htm или .html</p>
+                <p>Теперь если открыть созданный файл с помощью веб-браузера, он будет отображен как веб-страница.</p>
+                <p>Любая Web-страница структурно разбивается на две части: заголовок и тело. В заголовке указывается служебная информация обо всей странице, а в теле Web документа описывается ее содержимое вместе с правилами оформления. При этом заголовок Web-страницы ограничивается тэгами &lt;head&gt; и &lt;/head&gt;, а тело документа обозначается тэгами &lt;body&gt; и &lt;/body&gt;. По правилам хорошего стиля программирования перед &lt;html&gt; ставится идентификатор применяемого стандарта HTML.</p>
+                <p>В заголовок документа могут входить: тэг, отображающий наименование Web-страницы, тэг стилевого оформления, тэг выполняемого сценария и так называемые метаданные. Для внедрения метаданных в Web страницу применяется тэг &lt;meta&gt;. Тегов &lt;meta&gt; может быть несколько. Структура Web-страницы представлена на рисунке 1.</p>
+                <img src="" alt="" class="">
+                <div class="code1">
+                    <div id="highlighter_729816" class="syntaxhighlighter  xml">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="gutter">
+                                        <div class="line number1 index0 alt2">1</div>
+                                        <div class="line number2 index1 alt1">2</div>
+                                        <div class="line number3 index2 alt2">3</div>
+                                        <div class="line number4 index3 alt1">4</div>
+                                        <div class="line number5 index4 alt2">5</div>
+                                        <div class="line number6 index5 alt1">6</div>
+                                        <div class="line number7 index6 alt2">7</div>
+                                        <div class="line number8 index7 alt1">8</div>
+                                        <div class="line number9 index8 alt2">9</div>
+                                        <div class="line number10 index9 alt1">10</div>
+                                        <div class="line number11 index10 alt2">11</div>
+                                        <div class="line number12 index11 alt1">12</div>
+                                    </td>
+                                    <td class="code">
+                                        <div class="container">
+                                            <div class="line number1 index0 alt2"><code class="xml plain">&lt;!DOCTYPE&nbsp;html&gt;</code></div>
+                                            <div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code>&nbsp;<code class="xml color1">lang</code><code class="xml plain">=</code><code class="xml string">"en"</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"UTF-8"</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">http-equiv</code><code class="xml plain">=</code><code class="xml string">"X-UA-Compatible"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"IE=edge"</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"viewport"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"width=device-width,&nbsp;initial-scale=1.0"</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Document&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">Тело&nbsp;документа</code></div>
+                                            <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number12 index11 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p>Между тэгами &lt;title&gt; и &lt;/title&gt; указывается название страницы, которое отображается в строке заголовка окна при просмотре странички в браузере.</p>
+                <p>B теле документазаключается гипертекст, который определяет собственно Web-страницу. Гипертекстом является произвольная часть документа, которую разрабатывает автор и которая отображается браузером. Внутри элемента &lt;body&gt; можно использовать все элементы, предназначенные для дизайна Web-страницы. Внутри начального тега &lt;body&gt; могут располагаться атрибуты, обеспечивающие установки для всей страницы в целом. Синтаксис использования атрибутов представлен ниже:</p>
+                <p class="div">&lt;body атрибут_1=«значение1» атрибут_2=«значение2»…&gt;</p>
+                <p>У тега &lt;body&gt; могут быть следующие атрибуты:</p>
+                <ul>
+                    <li class="li"><span>marginheight</span> – определяет ширину (в пикселах) верхнего и нижнего полей документа. Работает только в браузерах Netscape.</li>
+                    <li class="li"><span>marginwidth</span> – определяет ширину (в пикселах) левого и правого полей документа. Работает только в браузерах Netscape.</li>
+                    <li class="li"><span>topmargin</span> – определяет ширину (в пикселах) верхнего и нижнего полей документа. Работает только в браузерах Internet Explorer.</li>
+                    <li class="li"><span>leftmargin</span> – определяет ширину (в пикселах) левого и правого полей документа. Работает только в браузерах Internet Explorer.</li>
+                    <li class="li"><span>background</span> – определяет изображение для "заливки" фона. Значение задается в виде полного URL или имени файла с картинкой в формате GIF или JPG.</li>
+                    <li class="li"><span>bgcolor</span> – определяет цвет фона документа.</li>
+                    <li class="li"><span>text</span> – определяет цвет текста в документе.</li>
+                    <li class="li"><span>link</span> – определяет цвет гиперссылок в документе.</li>
+                    <li class="li"><span>vlink</span> – определяет цвет гиперссылок на документы, которые вы уже просмотрели.</li>
+                    <li class="li"><span>alink</span> – определяет цвет подсветки гиперссылок в момент нажатия.</li>
+                </ul>
+                <p>Шрифт задается тегом &lt;front&gt;, который имеет следующие атрибуты: face – имена шрифтов, разделенные запятыми, size – размер от 1 до 7 (по умолчанию 3), color – цвет шрифта.</p>
+                <p>В HTML существуют специальные теги для заголовков: от &lt;h1&gt; (самого крупного) до &lt;h6&gt; (самого мелкого). Для создания абзаца используется тег &lt;p&gt;.</p>
+                <p>Kаждая HTML-страница имеет свой уникальный адрес в Интернете, который называется универсальным указателем ресурса (URL). Для перехода на Web страницу используется гиперссылка. За организацию гиперссылок в языке HTML отвечает элемент &lt;a&gt;…&lt;/a&gt;, который чаще всего использует следующий шаблон</p>
+                <p class="div">&lt;a href="Адрес ссылки (или URL)"&gt; текст для щелчка &lt;/a&gt;</p>
+                <p>Также можно создавать внутренние ссылок, позволяющих переходи между элементами документа. Сначала в нужных местах устанавливается метка с помощью атрибута namе</p>
+                <p class="div">&lt;A name="metka"&gt;...&lt;/a&gt;<br><i>или</i><br>&lt;A name="http://адрес/файл.html#метка”>…&lt;/a&gt;</p>
+                <p>Затем определяется ссылка на метку</p>
+                <p class="div">&lt;a href=”#metka”&gt; текст для щелчка &lt;/a&gt;</p>
+                <p>Для хранения изображений используются десятки различных форматов: gif, jpeg, bmp, pcx, vmf и др. Однако для работы с изображениями в документах HTML обычно выбирают форматы, которые распознаются браузерами gif, jpeg. Для отображения других форматов необходимо устанавливать плагины или запускать Java-апплеты. Рекомендуется использовать графические файлы размером до 50 Кб</p>
+                <p>Для вставки изображения используется тэг &lt;IMG&gt; с атрибутом src, который указывает URL графического файла.</p>
+                <p class="div">&lt;img src=”URL”&gt;</p>
+                <p>При организации ссылки, в качестве которой используется изображение, применяется шаблон из комбинации двух тэгов:</p>
+                <p class="div">&lt;a href=”Адрес ссылки”&gt;&lt;IMG src=”Ссылка на рисунок”&gt;&lt;/a&gt;</p>
+                <h3><a name="2" href="#head">ТЕГИ СПИСКОВ</a></h3>
+                <p>Список отличается от обычного текста тем, что пользователю не надо думать о нумерации его пунктов. Если список дополняется новыми пунктами или укорачивается, нумерация корректируется автоматически. Различают маркированный, нумерованный списки, списки с определениями. Шаблон маркированного или ненумерованного списка представлен ниже.</p>
+                <p class="div1">&lt;ul&gt;<br>&emsp;&lt;li&gt;-элемент 1&lt;/li&gt;<br>&emsp;&lt;li&gt;-элемент 2&lt;/li&gt;<br>&emsp;&lt;li&gt;-элемент 3&lt;/li&gt;<br>&lt;/ul&gt;</p>
+                <p>B тэге маркированного списка можно применить атрибут type, принимающий значения disc (круг), circle или round (окружность), square (квадрат). В качестве маркеров можно использовать графические изображения. Тогда, после указания &lt;li&gt; определяется тэг &lt;img src=”рисунок”&gt;.</p>
+                <p>Структура нумерованного списка похожа на маркированный:</p>
+                <p class="div1">&lt;ol&gt;<br>&emsp;&lt;li&gt;-элемент 1&lt;/li&gt;<br>&emsp;&lt;li&gt;-элемент 2&lt;/li&gt;<br>&emsp;&lt;li&gt;-элемент 3&lt;/li&gt;<br>&lt;/ol&gt;</p>
+                <p>Каждый пункт маркируется элементом упорядоченной последовательности: арабскими или римскими числами, буквами латинского алфавита. Способ нумерации задается при помощи атрибута type тега &lt;ol&gt;, который может принимать следующие значения:</p>
+                <ol>
+                    <li>type=”1” — 1,2,3,4</li>
+                    <li>type=”i” — i, ii, iii, iv</li>
+                    <li> type=”I” — I, II,III,IV</li>
+                    <li>type=”a” — a,b,c,d</li>
+                    <li>type=”A” — A,B,C,D</li>
+                </ol>
+                <p>Можно формировать также вложенные списки, структура которых представлена ниже</p>
+                <div class="code1">
+                    <div id="highlighter_428089" class="syntaxhighlighter  xml">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="gutter">
+                                        <div class="line number1 index0 alt2">1</div>
+                                        <div class="line number2 index1 alt1">2</div>
+                                        <div class="line number3 index2 alt2">3</div>
+                                        <div class="line number4 index3 alt1">4</div>
+                                        <div class="line number5 index4 alt2">5</div>
+                                        <div class="line number6 index5 alt1">6</div>
+                                        <div class="line number7 index6 alt2">7</div>
+                                        <div class="line number8 index7 alt1">8</div>
+                                        <div class="line number9 index8 alt2">9</div>
+                                        <div class="line number10 index9 alt1">10</div>
+                                        <div class="line number11 index10 alt2">11</div>
+                                        <div class="line number12 index11 alt1">12</div>
+                                        <div class="line number13 index12 alt2">13</div>
+                                        <div class="line number14 index13 alt1">14</div>
+                                    </td>
+                                    <td class="code">
+                                        <div class="container">
+                                            <div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Пункт&nbsp;1.&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Пункт&nbsp;2.</code></div>
+                                            <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Подпункт&nbsp;2.1&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Подпункт&nbsp;2.2</code></div>
+                                            <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Подпункт&nbsp;2.2.1.&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">li</code><code class="xml plain">&gt;Подпункт&nbsp;2.2.2.&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">li</code><code class="xml plain">&gt;</code></div>
+                                            <div class="line number14 index13 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">ul</code><code class="xml plain">&gt;</code></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h3><a href="#head" name="3">ТЕГИ ТАБЛИЦ</a></h3>
+                <p>Элемент &lt;table&gt; служит контейнером для элементов, определяющих содержимое таблицы. Любая таблица состоит из строк и ячеек, которые задаются с помощью тегов &lt;tr&gt; и &lt;td&gt;. Для отображения границ таблицы используется атрибут border. С помощью тэга &lt;th&gt; можно создать табличный заголовок. Текст элемента th центрируется и выделяется жирным шрифтом. С помощью атрибута colspan можно указать на сколько столбцов должна быть растянута указанная ячейка, а с помощью атрибута rowspan – на сколько строк должна быть растянута указанная ячейка.</p>
+                <h3><a href="#head" name="4">ТЕГИ СОЗДАНИЯ ВЕБ-СТРАНИЦ</a></h3>
+                <p>Форма ограничивается тегами &lt;form&gt; и &lt;/form&gt;. Между этими тегами располагаются теги, создающие элементы управления. При необходимости, элементы управления могут размещаться в ячейках таблицы, которая полностью располагается в форме.</p>
+                <p>Всего существует три тега для вставки элементов управления в страницу: &lt;input/&gt; — общий тег для большинства элементов ввода, &lt;select&gt;&lt;/select&gt; — выпадающий список, &lt;textarea&gt;…&lt;/textarea&gt; — текстовое поле.</p>
+                <p>Большинство элементов управления отображаются при помощи тега &lt;input/&gt;. Конкретный вид элемента управления зависит от атрибута type (&lt;input type="xxx"/&gt;). Значения атрибута представлены в таблице ниже.</p>
+                <table class="tb1">
+                    <caption>Значение атрибута type тега &lt;input&gt;</caption>
+                    <tr>
+                        <th>Значение атрибута type</th>
+                        <th>Функциональное назначение</th>
+                        <th>Внешний вид</th>
+                    </tr>
+                    <tr>
+                        <td>text</td>
+                        <td>Обычное текстовое поле</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>"Маскированное" текстовое поле</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>checkbox</td>
+                        <td>Флажок</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>radio</td>
+                        <td>Переключатель</td>
+                        <td><input type="radio"></td>
+                    </tr>
+                    <tr>
+                        <td>submit</td>
+                        <td>Кнопка для отправки форма на сервер</td>
+                        <td><input type="submit"></td>
+                    </tr>
+                    <tr>
+                        <td>reset</td>
+                        <td>Кнопка для очистки полей формы</td>
+                        <td><input type="reset"></td>
+                    </tr>
+                    <tr>
+                        <td>button</td>
+                        <td>Обычная кнопка(её действие можно будет задать позднее)</td>
+                        <td><input type="button"></td>
+                    </tr>
+                    <tr>
+                        <td>image</td>
+                        <td>Изображение-кнопка</td>
+                        <td><input type="image"></td>
+                    </tr>
+                    <tr>
+                        <td>file</td>
+                        <td>Кнопка для выбора файла для присоединения к форме координаты нажатия</td>
+                        <td><input type="file"></td>
+                    </tr>
+                </table>
+                <p>Для расширения функциональности форм стандарте HTML5 представлены новые элементы управления, которые уже частично реализованы в браузерах. Если элемент управления не поддерживается браузером, то он будет заменён на обычное текстовое поле, поэтому их рекомендуется использовать. Эти элементы представлены в таблице ниже</p>
+                <table class="tb1">
+                    <caption>Значение атрибута type стандарта HTML5</caption>
+                    <tr>
+                        <th>Значение атрибута type</th>
+                        <th>Функциональное назначение</th>
+                        <th>Внешний вид</th>
+                    </tr>
+                    <tr>
+                        <td>search</td>
+                        <td>Поле для поискового запроса. Имеет кнопку очистки и подсказки из истории поиска в браузере.</td>
+                        <td><input type="search"></td>
+                    </tr>
+                    <tr>
+                        <td>email, url, tel</td>
+                        <td>Поля имеют вид обычного текстового поля, однако они используются при обработке браузерами мобильных устройств.</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>range</td>
+                        <td>Ползунок, позволяющий указать числовое значение</td>
+                        <td><input type="range"></td>
+                    </tr>
+                    <tr>
+                        <td>number</td>
+                        <td>Текстовое поле с кнопками увеличения/уменьшения числового значения</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>time</td>
+                        <td>Поле для ввода времени</td>
+                        <td><input type="time"></td>
+                    </tr>
+                    <tr>
+                        <td>date</td>
+                        <td>Поле для ввода даты</td>
+                        <td><input type="date"></td>
+                    </tr>
+                </table>
+                <p>Также существуют такие атрибуты как value, который используется для определения начального текста в текстовых полях или для надписи на кнопках. Атрибут checked позволяет отметить флажок или переключатель по умолчанию. Атрибут size описывает длину поля ввода. Атрибут disabled позволяет «деактивировать» элемент управления.</p>
+                <p>Также существуют параметры, поддерживаемые ещё не всеми браузерами, но достаточно удобные: атрибут placeholder позволяет задать текст, отображаемый если текстовое поле не заполнено, атрибут autofocus позволяет установить фокус ввода на элемент после загрузки страницы, атрибут required позволяет пометить поле как обязательное для заполнения.</p>
+                <p>Чтобы из группы переключателей выбирался только один — необходимо всем элементам из группы задать одинаковый атрибут name.</p>
+                <p>Для создания выпадающих списков используется тег &lt;select&gt;&lt;/select&gt;. Внутрь него вкладываются теги &lt;option&gt;&lt;/option&gt; с возможными вариантами. Тег &lt;option&gt; также имеет атрибуты checked и disabled</p>
+                <p>Для создания многострочного текстового поля используется парный тег &lt;textarea&gt;&lt;/textarea&gt;. Поддерживает атрибуты rows и cols, задающие количество строк и столбцов в символах.</p>
+                <p>Тег &lt;legend&gt; применяется для создания заголовка группы элементов формы, которая определяется с помощью тега &lt;fieldset&gt;. Группа элементов обозначается в браузере с помощью рамки, а текст, который располагается внутри контейнера &lt;legend&gt;, встраивается в эту рамку.</p>
+                <h3><a href="#head" name="5">ТЕГ &lt;div&gt;</a></h3>
+                <p>Тег &lt;div&gt; является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого. Как правило, вид блока управляется с помощью стилей.</p>
+                <h3><a href="#head" name="6">ТЕГ &lt;span&gt;</a></h3>
+                <p>Тег &lt;span&gt; предназначен для определения строчных элементов документа. В отличие от блочных элементов, таких как &lt;table&gt;, &lt;p&gt; или &lt;div&gt;, с помощью тега &lt;span&gt; можно выделить часть информации внутри других тегов и установить для нее свой стиль. Например, внутри абзаца (тега &lt;p&gt;) можно изменить цвет и размер первой буквы, если добавить начальный и конечный тег &lt;span&gt; и определить для него стиль текста.</p>
+                <h3><a href="#head" name="7">СЕМАНТИЧЕСКИЕ ТЕГИ</a></h3>
+                <p>В стандарт HTML5 были введены семантические теги, с помощью которых можно сделать страницы сайтов более понятными для поисковых систем и браузеров. Следует отметить, что есть несколько семантических тегов, которые рекомендуется использовать для разметки страниц вместо &lt;div&gt; и &lt;span&gt;:</p>
+                <ol>
+                    <li class="li">&lt;header&gt; – заголовочный блок сайта, обычно содержит навигацию, повторяется на всех страницах сайта</li>
+                    <li class="li">&lt;footer&gt; – заключительная часть смыслового раздела или всего сайта, которая содержит информацию об авторах, список литературы, копирайт и так далее</li>
+                    <li class="li">&lt;nav&gt; – навигационное меню</li>
+                    <li class="li">&lt;main&gt; – основное, не повторяющееся на других страницах, содержание страницы</li>
+                    <li class="li">&lt;section&gt; позволяет группировать логически связанное содержимое в документе, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне</li>
+                    <li class="li">&lt;article&gt; – это может быть пост на форуме, статья в журнале или газете, заметка в блоге, сообщение пользователя или другая независимая контент-единица</li>
+                    <li class="li">тэг &lt;mark&gt; – выделить (подсветить) важную часть в тексте.</li>
+                </ol>
+                <p>В HTML5 можно создавать подписи для иллюстраций с помощью тэгов: &lt;figure&gt; и &lt;figcaption&gt;.</p>
+                <p class="div1">&lt;figure&gt;<br>&emsp;&lt;img src='foto.jpg' width='300' height='230'/&gt;<br>&emsp;&lt;figcaption&gt;Моя замечательная фотография&lt;/figcaption&gt;<br>&lt;/figure&gt;</p>
+            </section>
+            <h2><a href="#head" name="8">Задания к лабораторной работе № 1</a></h2>
+            <section class="sec1">
+                <p><span>ЗАДАНИЕ 1.</span> Самостоятельно создайте новый документ index.html с произвольным текстом одной тематики со следующим содержимым</p>
+                <p><span>1.1.</span> В созданном документе должен быть заголовок в центре страницы (теги h1) произвольного цвета, гарнитуры и начертания. Текст заголовка должен совпадать с названием страницы. Три абзаца текста более 4–5 строк каждый абзац. Для каждого абзаца свой шрифт, размер, цвет (тег font). Для каждого абзаца придумать заголовок (h3), а также заголовок для всего текста (h2). Внутри каждого абзаца выделить несколько слов элементами span.</p>
+                <p><span>1.2.</span> Создайте список следующего вида, соответствующий выбранной тематике </p>
+                <ol>
+                    <li>Элемент 1
+                            <ul>
+                                <li type="disc">Элемент 1.1</li>
+                                <li type="disc">Элемент 1.2</li>
+                            </ul>
+                    </li>
+                    <li>Элемент 2
+                        <ul>
+                            <li>Элемент 2.1</li>
+                            <li>Элемент 2.2</li>
+                            <li>Элемень 2.3</li>
+                        </ul>
+                    </li>
+                    <li>Элемент 3
+                        <ul>
+                            <li type="square">Элемент 3.1</li>
+                            <li type="square">Элемент 3.2</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Перед списком вставить заголовок, отражающий его содержимое (h2).</p>
+                <p><span>1.3.</span> Таблица, содержащая произвольный текст выбранной тематики с числовой информацией. Перед таблицей вставить заголовок (h2). Форма таблицы может быть произвольная, но обязательно должны быть объеденные ячейки строк и столбцов. Пример таблицы представлен ниже</p>
+                <table class="tb2">
+                    <caption>пример таблицы(НЕ ПОВТОРЯТЬ ЕГО!)</caption>
+                    <tr>
+                        <td rowspan="2">Производитель</td>
+                        <td rowspan="2">Товар</td>
+                        <td colspan="2">Цена товара</td>
+                    </tr>
+                    <tr>
+                        <td>с НДС</td>
+                        <td>без НДС</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Erich Krause</td>
+                        <td>Карандаш</td>
+                        <td>30</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Ластик</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Ручка гелевая</td>
+                        <td>10</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Итого</th>
+                        <th>60</th>
+                        <th>90</th>
+                    </tr>
+                </table>
+                <p><span>ЗАДАНИЕ 2</span> Создать еще один HTML-документ second.html с текстовой информацией, по содержанию связанной с первой страницей cо следующим содержимым:</p>
+                <p><span>2.1.</span> Два элемента &lt;div&gt; с произвольным текстом из нескольких абзацев. Перед каждым элементом заголовок (h3).</p>
+                <p><span>2.2.</span> Любой рисунок. Перед рисунком оформить заголовок (h2).</p>
+                <p><span>2.3.</span> Элемент &lt;span&gt;, содержащий авторский знак © и ФИО автора</p>
+                <p><span>ЗАДАНИЕ 3.</span> Элемент текста на первой web-странице и в таблице сделать ссылкой на вторую страницу, а рисунок на второй странице – ссылкой на первую.</p>
+                <p><span>ЗАДАНИЕ 4.</span> Создайте новый документ с формой, изображённую ниже</p>
+                <img src="lab\form.png" alt="form">
+                <p><span>ЗАДАНИЕ 5.</span> Создать третий документ используя семантические теги. В документе должны быть верхние (header) и нижние (footer) колонтитулы, а также информация должна быть разбита на секции (section), также должны быть использованы теги aside, figure, nav</p>
+                <p>Тег footer должен содержать данные автора (ФИО, курс, группа, телефон и email).</p>
+                <h2></h2>
+            </section>
+            <section class="sec">
+                <h2><a href="#head" name="9">Контрольные вопросы</a></h2>
+                <ol class="ol">
+                    <li class="li">Как создать простейшую Web-страницу?</li>
+                    <li class="li">Что представляет собой структура HTML-документа?</li>
+                    <li class="li">Какие теги относятся к служебным, а какие к структурным?</li>
+                    <li class="li">В каком элементе указывается заголовок страницы?</li>
+                    <li class="li">Для чего используется метаданные? Каким тегом они указываются в структуре HTML-документа?</li>
+                    <li class="li">Для чего используется !DOCTYPE?</li>
+                    <li class="li">Каким образом можно изменить установки для всей страницы в целом?</li>
+                    <li class="li">Какие виды списков предусмотрены в HTML?</li>
+                    <li class="li">Как изменить вид маркера в маркированном списке?</li>
+                    <li class="li">Как изменить вид маркера в нумерованном списке?</li>
+                    <li class="li">Из каких частей состоит список с определениями?</li>
+                    <li class="li">Создайте вложенный список из нумерованного, состоящего из двух пунктов, в каждом из которых два маркированных подпункта. Символ маркера квадрат</li>
+                    <li class="li">Как создать маркированный список?</li>
+                    <li class="li">Как создать нумерованный список?</li>
+                    <li class="li">С помощью каких элементов создается таблица?</li>
+                    <li class="li">Как объединить несколько столбцов в один?</li>
+                    <li class="li">Как объединить несколько строк в одну?</li>
+                    <li class="li">Что такое гипертекст? Как создать гиперссылку?</li>
+                    <li class="li">Как организовать переход в начало или конец документа?</li>
+                    <li class="li">Создайте таблицу с гиперссылкой на другую вебстраницу</li>
+                    <li class="li">Каким образом создать гиперссылку, используя графическое изображение?</li>
+                    <li class="li">Какие теги называются семантическими? Назовите основные семантические теги</li>
+                    <li class="li">Для чего необходимы теги &lt;section&gt; и &lt;arcticle&gt;?</li>
+                    <li class="li">Для чего необходимы теги &lt;footer&gt; и &lt;header&gt;?</li>
+                    <li class="li">Какой тег определяет элемент формы? Какой атрибут определяет вид элемента формы?</li>
+                    <li class="li">Какие элементы необходимы для построения формы?</li>
+                    <li class="li">Для чего необходимы теги &lt;nav&gt; и &lt;main&gt;?</li>
+                    <li class="li">Для чего предназначен тег &lt;th&gt;?</li>
+                </ol>
+            </section>
+        </main>
+        <div class="sled">
+            <a href="lab02.html">Cледующая лабораторная &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() { 
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

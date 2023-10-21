@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lec12\lec12.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <title>ЛЕКЦИЯ 12</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a name="head" href="main.html"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+				</style>
+				<g id="Слой_1">
+					<g>
+						<path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+							c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+						<path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+							c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+						<path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+						<path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+					</g>
+				</g>
+				<g id="Слой_2">
+				</g>
+			</svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛЕКЦИЯ 12</h1>
+                <h2>ОБЪЕКТНАЯ МОДЕЛЬ ДОКУМЕНТА(DOM)</h2>
+                <nav>
+                    <ol class="ol1">
+                        <li class="li">
+                            <a href="#1">ОСНОВЫ ЯЗЫКА JAVASCRIPT</a>
+                        </li>
+                        <li class="li">
+                            <a href="#2">ПОНЯТИЕ DOM</a>
+                        </li>
+                        <li class="li">
+                            <a href="#3">ДОСТУП К ЭЛЕМЕНТАМ DOM</a>
+                        </li>
+                        <li class="li">
+                            <a href="#4">СОБЫТИЯ</a>
+                        </li>
+                        <li class="li">
+                            <a href="#5">РАБОТА С ФОРМАМИ</a>
+                        </li>
+                    </ol>
+                </nav>
+                <h3>
+                    <a name="1" href="#head">ОСНОВЫ ЯЗЫКА JAVASCRIPT</a>
+                </h3>
+                <section class="sec">
+                    <p><span>Язык JavaScript</span> — объектно-ориентированный язык программирования, который используется для создания сценариев динамического взаимодействия с веб-страницами</p>
+                    <h5>ПОДКЛЮЧЕНИЕ JS</h5>
+                    <div class="sec11">
+                        <img src="lec12\js.png" alt="js" class="img2">
+                    </div>
+                    <h5>ТИПЫ ДАННЫХ JS</h5>
+                    <div class="sec1">
+                        <p class="span">NUMBER(число)</p>
+                        <p class="span">STRING(строка)</p>
+                        <p class="span">NULL и UNDERFINED</p>
+                        <p class="span">FUNCTION</p>
+                        <p class="span">TRUE OR FALSE(булево значение)</p>
+                        <p class="span">OBJECT(объект)</p>
+                    </div>
+                    <h5>ПЕРЕМЕННЫЕ JS</h5>
+                    <div class="sec1">
+                        <img src="lec12\data.png" alt="data" class="img3">
+                        <p>Переменные задаются с помощью ключевых слов <span>let</span> и <span>const</span></p>
+                        <p class="span1">let <span class="span">x</span> = "JavaScript"</p>
+                        <p class="span1">const <span class="span">Pi</span> = 3.141592653589793</p>
+                        <p>Границы слов обозначаются сменой регистра: <span>fontSize</span></p>
+                        <p>Ключевые слова, которые не разрешается использовать при задании имени</p>
+                        <img src="lec12\data1.png" alt="data" class="img2">
+                        <p>В строгом режиме не используется</p>
+                        <img src="lec12\data2.png" alt="data" class="img2">
+                    </div>
+                    <h5>ФУНКЦИЯ JS</h5>
+                    <div class="sec1">
+                        <p>Функция представляет собой часть кода для выполнения задачи, которая не запускается без ссылки на нее или при отсутствии вызова</p>
+                        <img src="lec12\fun.png" alt="fun" class="img2">
+                        <img src="lec12\fun1.png" alt="fun" class="img2">
+                        <img src="lec12\fun2.png" alt="fun" class="img2">
+                    </div>
+                    <h5>ЧИСЛА JS</h5>
+                    <div class="sec1">
+                        <p>Для преобразования строки в число используются функции parseFloat и parseInt</p>
+                    </div>
+                    <h5>ОПЕРАТОРЫ СРАВНЕНИЯ</h5>
+                    <div class="sec1">
+                        <img src="lec12\sravn.png" alt="sravn" class="img4">
+                    </div>
+                    <h5>МАТЕМАТИЧЕСКИЕ ОПЕРАТОРЫ</h5>
+                    <div class="sec1">
+                        <img src="lec12\math.png" alt="sravn" class="img4">
+                    </div>
+                </section>
+                <h3>
+                    <a name="2" href="#head">ПОНЯТИЕ DOM</a>
+                </h3>
+                <section class="sec">
+                    <img src="lec12\dom.png" alt="dom" class="img3">
+                    <p><span>Объектная модель документа (Document Objeсt Model)</span> — это прикладной программный интерфейс для HTML- и XML-документов, который представляет собой иерархическое дерево узлов, позволяя добавлять, удалять и изменять отдельные части страницы.</p><br><br><br><br><br>
+                    <h5>СВОЙСТВА DOM</h5>
+                    <div class="sec1">
+                        <img src="lec12\dom1.png" alt="dom" class="img4">
+                        <img src="lec12\dom2.png" alt="dom" class="img2">
+                    </div>
+                    <h5>МЕТОДЫ DOM</h5>
+                    <div class="sec1">  
+                        <img src="lec12\dom3.png" alt="dom" class="img4">
+                        <img src="lec12\dom4.png" alt="dom" class="img2">
+                    </div>
+                </section>
+                <h3>
+                    <a name="3" href="#head">ДОСТУП К ЭЛЕМЕНТАМ DOM</a>
+                </h3>
+                <section class="sec">
+                    <h5>getElementById()</h5>
+                    <img src="lec12\get.png" alt="dom" class="img2">
+                    <h5>getElementsByName()</h5>
+                    <img src="lec12\get1.png" alt="dom" class="img2">
+                    <h5>getElementsByClassName()</h5>
+                    <img src="lec12\get2.png" alt="dom" class="img2">
+                    <h5>getElementsByTagName()</h5>
+                    <img src="lec12\get3.png" alt="dom" class="img2">
+                    <h5>querySelector()</h5>
+                    <img src="lec12\get4.png" alt="dom" class="img2">
+                    <h5>querySelectorAll()</h5>
+                    <img src="lec12\get5.png" alt="dom" class="img2">
+                </section>
+                <h3>
+                    <a name="4" href="#head">СОБЫТИЯ</a>
+                </h3>
+                <section class="sec">
+                    <img src="lec12\ob.png" alt="dom" class="img2">
+                    <h6>ПРИМЕР</h6>
+                    <img src="lec12\prim.png" alt="dom" class="img2">
+                </section>
+                <h3>
+                    <a name="5" href="#head">РАБОТА С ФОРМАМИ</a>
+                </h3>
+                <section class="sec">
+                    <p>В атрибуте <span>action</span> указывается расположение (URL -адрес) приложе­ния или сценария (иногда называемое  страницей сценария) для обра­ботки формы. В нашем примере атрибут <span>action</span> посылает данные на сервер, где они обрабатываются сценарием  mailinglist.php</p>
+                    <p class="span2">&lt;form action="mailinglist.php" method="post"&gt;&lt;/form&gt;</p>
+                    <p>При выборе метода <span>POST</span> браузер посылает на сервер отдельный за­прос, состоящий из нескольких специальных заголовков, после которых следуют данные. Содержимое этого запроса доступно только серверу, в связи с чем этот метод оптимален для передачи конфиденциальных  данных, таких как реквизиты банковских карт или другая персональ­ная информация. Метод <span>POST</span> также предпочтителен при передаче большого объема данных, так как в отличие от метода <span>GET</span>, у него нет ограничений по количеству пере­даваемых символов.</p>
+                    <p>При выборе метода <span>GET</span> преобразованные данные формы встраиваются в URL-запрос, отправляемый на сервер.</p>
+                    <p>Метод <span>GET</span> подходит, если пользователям нужно предоставить воз­можность сохранять в закладках результаты отправки данных формы(например, список результатов поискового запроса). Поскольку дан­ные, введенные в форму, в этом случае оказываются у всех на виду, та­кой метод не подходит для форм ввода персональной или финансовой информации. Кроме того, метод <span>GET</span> непригоден, чтобы загружать файлы на сервер.</p>
+                    <img src="lec12\form.png" alt="form" class="img2">
+                    <img src="lec12\form1.png" alt="form" class="img2">
+                </section>
+        </main>
+        <div class="pred">
+            <a href="lection11.html">&#9668;Предыдущая лекция</a>
+        </div>
+        <div class="sled">
+            <a href="lection1.html">Первая лекция &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

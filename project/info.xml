@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/css" href="info.css"?>
+<info>
+    <head>
+        <name0>Соц сеть</name0>
+        <contacts>Контакт</contacts>
+    </head>
+    <socials>
+        <name>ВК</name>
+        <contact>id108203568</contact>
+    </socials>
+    <socials>
+        <name>email</name>
+        <contact>barkovski@belstu.by</contact>
+    </socials>
+    <socials>
+        <name>Тел.</name>
+        <contact>+375(17)327-43-76</contact>
+    </socials>
+</info>

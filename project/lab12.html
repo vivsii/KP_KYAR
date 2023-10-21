@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lab\lab12.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css"/>
+        <title>ЛАБОРАТОРНАЯ 12</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a href="main.html" name="head"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+				</style>
+				<g id="Слой_1">
+					<g>
+						<path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+							c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+						<path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+							c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+						<path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+						<path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+					</g>
+				</g>
+				<g id="Слой_2">
+				</g>
+			</svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <h1 class="h1">ЛАБОРАТОРНАЯ 12</h1>
+            <h2>СОЗДАНИЕ И ВАЛИДАЦИЯ ХМL-ДОКУМЕНТОВ</h2>
+            <nav>
+                <ul class="ul">
+                    <li class="li">
+                        <a href="#1">ТЕОРЕТИЧЕСКИЕ СВЕДЕНИЯ</a>
+                        <ol>
+                            <li><a href="#2">ОСНОВЫ XML</a></li>
+                            <li><a href="#3">ВАЛИДНЫЕ XML-ДОКУМЕНТЫ</a></li>
+                        </ol>
+                    </li>
+                    <li class="li">
+                        <a href="#4">ЗАДАНИЯ К РАБОТЕ</a>
+                    </li>
+                    <li class="li">
+                        <a href="#5">КОНТРОЛЬНЫЕ ВОПРОСЫ</a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="p"><span class="span">ЦЕЛЬ РАБОТЫ:</span> изучить правила создания XML-документов, получить навыки создания валидных документов и их проверка./p>
+            <h2><a name="1" href="#head">Теоретические сведения для выполнения работы</a></h2>
+            <section class="sec">
+                <h3><a href="#head" name="2">ОСНОВЫ XML</a></h3>
+                <p>XML (eXtensible Markup Language) — расширяемый язык разметки, созданный для хранения, транспортировки и обмена данными. Он включает в себя элементы SGML и предназначен для определения HTML-подобных языков. В нем отсутствуют элементы SGML, не применимые к языкам типа HTML, а другие элементы упрощены, чтобы облегчить их понимание и использование. В языке XML нет предопределенных тегов, автор определяет свои языковые теги и свою структуру документа. Формально XML представляет собой набор правил для создания собственных языков разметки, а также чтения и написания документов на языке разметки. Пример XML-документа представлен ниже</p>
+                <p class="div">&lt;?xml version="1.0" encoding="UTF-8"?><br>&lt;note><br>&emsp;&lt;to>Анна&lt;/to><br>&emsp;&lt;from>Дмитрий&lt;/from><br>&emsp;&lt;heading>Напоминание&lt;/heading><br>&emsp;&lt;body>Не забудь обо мне в эти выходные!&lt;/body><br>&lt;/note></p>
+                <p>Согласно примеру, XML-документ состоит из элементов, которые представляют собой контент между начальным и конечным тегом. Первые строки называются прологом и объявляют процессору XML, что данный документ размечен в XML. Пролог включает объявление (XML-декларация), которое начинается с разделителя, состоящего из пяти символов &lt;?xml, за которым следует некоторое количество определений свойств, каждое из которых состоит изимени свойства и его значения, заключенного в кавычки. Объявление завершается закрывающим разделителем из двух символов ?>. Варианты объявлений представлены ниже</p>
+                <p class="div">&lt;?xml version="1.0"?><br>&lt;?xml version='1.0' encoding='UTF-8' standalone='yes'?><br>&lt;?xml version = '1.0' encoding= 'UTF-8' standalone ="no"?></p>
+                <p>На первом рисунке элемент документа &lt;note> является корневым. Следующие 4 строки описывают дочерние элементы корневого элемента: &lt;to>Анна&lt;/to>, &lt;from>Дмитрий&lt;/from>, &lt;heading>Напоминание&lt;/heading>, &lt;body>Не забудь обо мне в эти выходные!&lt;/body>. Последняя строка определяет конец корневого элемента: &lt;/note>. В общем виде структуру ХМL-документа после пролога можно представить в следующем виде:</p>
+                <p class="div">&lt;корневой><br>&emsp;&lt;потомок><br>&emsp;&emsp;&lt;подпотомок>.....&lt;/подпотомок><br>&emsp;&lt;/потомок><br>&lt;/корневой></p>
+                <p>При открытии в браузерах, например Mozilla или Opera, будет отображаться согласно рис. ниже</p>
+                <img src="lab\12.1.png" alt="12.1">
+                <p>Таким образом, необходимо подключение таблицы стилей для создания конечного продукта после объявления XMLдокумента. Пример XML-документа c подключением CSS представлен на рис. ниже</p>
+                <img src="lab\12.2.png" alt="12.2">
+                <p>Также следует различать синтаксически верный документ и валидные документы. К синтаксически верным (корректным) относятся XML-документы, которые соответствуют следующим правилам синтаксиса XML:</p>
+                <ol>
+                    <li>Все XML элементы должны иметь закрывающий тег.</li>
+                    <li> Теги XML являются регистрозависимыми</li>
+                    <li>Перед закрывающей угловой скобкой в пустых элементах XML требуется ставить косую черту.</li>
+                    <li>Значения должны быть заключены в одинарные или двойные кавычки.</li>
+                    <li>Все элементы обязаны соблюдать корректную вложенность.</li>
+                    <li>XML документ должен содержать один корневой элемент, который будет родительским для всех других элементов.</li>
+                    <li>Учитываются все символы форматирования (т.е. пробелы, переводы строк, табуляции не игнорируются, как в HTML).</li>
+                </ol>
+                <p>Имена элементов могут начинаться только с букв и символов подчеркивания и могут содержать только буквы, цифры, дефисы, точки и символы подчеркивания и не могут начинаться с сочетания «xml». В качестве имен можно использовать любые слова, зарезервированных слов нет.</p>
+                <h3><a href="#head" name="3">ВАЛИДНЫЕ XML-ДОКУМЕНТЫ</a></h3>
+                <p>Валидный XML-документ должен быть синтаксически верным и соответствовать одному из типов определения документов. Правила, определяющие допустимые элементы и атрибуты для XML документа, называются определениями документа или схемами документа.</p>
+                <p>С XML можно использовать различные типы определений документа:</p>
+                <p>– оригинальное определение типа документа (Document Type Definition, DTD).</p>
+                <p>– XML схема — тип определений, основанный на XML схема. DTD (Document Type Definition, определение типа документа) — это язык описания структуры XML-документа, который используется для проверки граматики XML-документа и его соответствия определенному типу. Цель DTD состоит в том, чтобы определить структуру XML документа. Это делается путем определения списка допустимых элементов. В прологе декларация объявления элементов может быть внутренняя или внешняя</p>
+                <table>
+                    <caption>Виды деклараций DTD</caption>
+                    <tr>
+                        <th>Внутренняя декларация DTD</th>
+                        <th>Внешняя декларация DTD</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;?xml version="1.0" encoding="UTF-8" ?><br>&lt;!DOCTYPE note [<br>&emsp;&lt;!ELEMENT note (to, from, Sbj,msg)><br>&emsp;&lt;!ELEMENT to (#PCDATA)><br>&emsp;&lt;!ELEMENT from (#PCDATA)><br>&emsp;&lt;!ELEMENT Sbj (#PCDATA)><br>&emsp;&lt;!ELEMENT msg (#PCDATA)><br>]><br>&lt;note><br>&emsp;&lt;to>Sunny&lt;/to><br>&emsp;&lt;from>Oliver&lt;/from><br>&emsp;&lt;Sbj>Hello&lt;/Sbj><br>&emsp;&lt;msg>This is a good day!&lt;/msg><br>&lt;/note></td>
+                        <td>&lt;?xml version="1.0" encoding="UTF-8" ?><br>&lt;!DOCTYPE note SYSTEM "note.dtd"><br>&emsp;&lt;note>
+                            <br>&emsp;&emsp;&lt;to>Sunny&lt;/to><br>&emsp;&emsp;&lt;from>Oliver&lt;/from><br>&emsp;&emsp;&lt;Sbj>Hello&lt;/Sbj><br>&emsp;&emsp;&lt;msg>This is a good day!&lt;/msg><br>&emsp;&lt;/note><br><span>файл note.dtd содержит:</span><br>&lt;!ELEMENT note (to,from,heading,body)><br>&lt;!ELEMENT to (#PCDATA)><br>&lt;!ELEMENT from (#PCDATA)><br>&lt;!ELEMENT heading (#PCDATA)><br>&lt;!ELEMENT body (#PCDATA)></td>  
+                    </tr>
+                </table>
+                <p>DTD в приведенном примере интерпретируется следующим образом:</p>
+                <ol>
+                    <li>!DOCTYPE note определяет, что корневым элементом документа является note</li>
+                    <li> !ELEMENT note определяет, что элемент note содержит четыре элемента: to, from, heading, body</li>
+                    <li> !ELEMENT to определяет, что элемент to должен быть типа "#PCDATA"</li>
+                    <li>!ELEMENT from определяет, что элемент from должен быть типа "#PCDATA"</li>
+                    <li>!ELEMENT from определяет, что элемент from должен быть типа "#PCDATA"</li>
+                    <li>!ELEMENT body определяет, что элемент body должен быть типа "#PCDATA"</li>
+                </ol>
+                <p>#PCDATA означает разбираемые текстовые данные. Кроме инструкции ELEMENT существуют следующие:</p>
+                <p>— ATTLIST для перечисления и объявления атрибутов, которые могут принадлежать элементу.</p>
+                <p>— ENTITY для определения сущностей в DTD с целью их использования как в связанном с DTD XML-документе, так и собственно в DTD.</p>
+                <p class="div">&lt;?xml version="1.0"?><br>&lt;!DOCTYPE note [<br>&emsp;&lt;!ENTITY name “Hello, world!”><br>=""><br>&lt;element>&name;&lt;/element></p>
+                <p>Сущность является заместителем содержания, которую можно однажды объявить и многократно использовать почти в любом месте документа. Встроенные сущности приведены в таблице</p>
+                <table>
+                    <caption>Многократно используемые встроенные сущности</caption>
+                    <tr>
+                        <th>Сущность</th>
+                        <th>Ссылка на сущность</th>
+                        <th>Значение</th>
+                    </tr>
+                    <tr>
+                        <td>lt</td>
+                        <td>&amp;lt;</td>
+                        <td>< (меньше чем) </td>
+                    </tr>
+                    <tr>
+                        <td>gt</td>
+                        <td>&amp;gt;</td>
+                        <td>> (больше чем)</td>
+                    </tr>
+                    <tr>
+                        <td>amp</td>
+                        <td>&amp;amp;</td>
+                        <td>& (амперсанд)</td>
+                    </tr>
+                    <tr>
+                        <td>apos</td>
+                        <td>&amp;apos;</td>
+                        <td>' (апостроф или одиночная кавычка)</td>
+                    </tr>
+                    <tr>
+                        <td>quot</td>
+                        <td>&amp;quot;</td>
+                        <td>" (двойная кавычка)</td>
+                    </tr>
+                </table>
+                <p>К основным недостаткам DTD схем относят синтаксические отличия от языка XML, а также отсутствие возможностей работы с типами данных. Для решения этих недостатков предлагается использовать XML Schema, которая описывают структуру XML документа. XML документ, прошедший проверку по XML Schema, является синтаксически верным и валидным, а также имеет ряд преимуществ перед DTD:</p>
+                <ul>
+                    <li>XML схема пишется на XML;</li>
+                    <li>XML схема легко расширяется;</li>
+                    <li>XML схема поддерживает типы данных;</li>
+                    <li>XML схема поддерживает пространства имен;</li>
+                </ul>
+                <p>Пример Schema представлен в таблице</p>
+                <table>
+                    <tr>
+                        <th>XML-документ</th>
+                        <th>XML Schema</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;?xml version="1.0" encoding="UTF-8"?><br>&lt;not xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="note.xsd"><br>&emsp;&lt;to>Sunny&lt;/to><br>&emsp;&lt;from>Oliver&lt;/from><br>&emsp;&lt;Sbj>Hello&lt;/Sbj><br>&emsp;&lt;msg>This is a good day!&lt;/msg><br>&lt;/note></td>
+                        <td>&lt;?xml version="1.0" encoding="UTF-8" ?><br>&lt;xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema"><br>&lt;xs:element name="note"><br>&lt;xs:complexType><br>&lt;xs:sequence><br>&emsp;&lt;xs:element name="to" type="xs:string"/><br>&emsp;&lt;xs:element name="from" type="xs:string"/><br>&emsp;&lt;xs:element name="heading" type="xs:string"/><br>&emsp;&lt;xs:element name="body" type="xs:string"/><br>&lt;/xs:sequence><br>&lt;/xs:complexType><br>&lt;/xs:element><br>&lt;/xs:schema></td>
+                    </tr>
+                </table>
+                <p>Приведенная выше схема интерпретируется следующим образом:</p>
+                <ol>
+                    <li>&lt;xs:element name="note"> определяет элемент "note";</li>
+                    <li>&lt;xs:complexType> у элемента "note" комплексный тип;</li>
+                    <li>&lt;xs:sequence> последовательность элементов элемента;</li>
+                    <li>&lt;xs:element name="to" type="xs:string"> у элемента "to" строковый тип (текст);</li>
+                    <li>&lt;xs:element name="from" type="xs:string"> у элемент "from" строковый тип;</li>
+                    <li>&lt;xs:element name="heading" type="xs:string"> у элемента "heading" строковый тип;</li>
+                    <li>&lt;xs:element name="body" type="xs:string"> у элемента "body" строковый тип.</li>
+                </ol>
+                <p>Как видно из примера, каждая XML схема состоит с корневого элемента «schema» и обязательного пространства имен «http://www.w3.org/2001/XMLSchema», а далее идет описание схемы.</p>
+            </section>
+            <h2><a href="#head" name="4">Задания к лабораторной работе № 12</a></h2>
+            <section class="sec1">
+                <p><span>Задание 1</span> Создать корректный XML-документ, который будет содержать информацию на произвольную тему. При выполнении задания используйте css.</p>
+                <p><span>Задание 2</span> Преобразуйте XML-документ из задания 1 в XML DTD, предварительно сделав его копию. Должно быть внутренне объявление DTD, в котором должны быть использованы сущности, которые затем применяются в XML-документе</p>
+                <p><span>Задание 3</span> Преобразуйте XML-документ из задания 1 в XML Schema, предварительно сделав его копию.</p>
+                <p><span>Задания 4</span> Провести проверку валидности XML-документов, подтвердив скриншотами результатов.</p>
+            </section>
+            <section class="sec">
+                <h2><a href="#head" name="5">Контрольные вопросы</a></h2>
+                <ol class="ol">
+                    <li class="li">Что такое XML?</li>
+                    <li class="li">Чем является первая строка в коде XML-документа?</li>
+                    <li class="li">Назовите правила синтаксиса XML-документа?</li>
+                    <li class="li">Какие должны быть имена элементов?</li>
+                    <li class="li">Как вы понимаете правило соблюдения корректной вложенности?</li>
+                    <li class="li">Какие элементы являются корневыми в XML-документе?</li>
+                    <li class="li">Для чего необходима валидация XML-документа?</li>
+                    <li class="li">В чем заключается разница между простыми и комплексными типами элементов в XML Schema?</li>
+                    <li class="li">В чем заключается преимущество Schema перед DTD?</li>
+                    <li class="li">Какие комплексные типы элементов XML Schema вы знаете?</li>
+                    <li class="li"> Какие простые типы элементов XML Schema вы знаете?</li>
+                    <li class="li">Что означает <i>xs:element</i>?</li>
+                    <li class="li">Что означает <i>xs:complexType</i>?</li>
+                    <li class="li">В чем заключается предназначение xs:sequence?</li>
+                    <li class="li">Для чего предназначен <i>xs:attribute</i>?</li>
+                    <li class="li">Что означает <i>xsi:noNamespaceSchemaLocation</i>?</li>
+                    <li class="li">Для чего используется ENTITY?</li>
+                    <li class="li">Что такое сущности? Каким образом вы использовали сущности?</li>
+                    <li class="li">Какие встроенные сущности вы знаете?</li>
+                    <li class="li">Для чего используется ATTLIST?</li>
+                    <li class="li"> Что такое валидный XML-документ? Как типы вы знаете?</li>
+                    <li class="li"> Что означает следующая запись <!ENTITY name “Hello, world!”>?</li>
+                    <li class="li">Что означает следующая запись <!ELEMENT to (#PCDATA)>?</li>
+                    <li class="li">Какие параметры и значения имеет инструкция ATTLIST?</li>
+                    <li class="li"> Какие параметры имеет инструкция ELEMENT?</li>
+                    <li class="li">. Что находится на <i>http://www.w3.org/2001/XMLSchema</i>?</li>
+                    <li class="li">Каким образом можно объявить DTD? Как расшифровывается аббревиатура?</li>
+                </ol>
+            </section>
+        </main>
+        <div class="pred">
+            <a href="lab11.html">&#9668;Предыдущая лабораторная</a>
+        </div>
+        <div class="sled">
+            <a href="lab13.html">Cледующая лабораторная &#9658;</a>
+        </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() { 
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>

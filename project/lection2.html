@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lec2\lec2.css">
+        <link rel="stylesheet" media="screen,projection" href="lec1\css\ui.totop.css" />
+        <title>ЛЕКЦИЯ 2</title>
+    </head>
+    <body>
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a href="main.html"><li>ГЛАВНАЯ</li></a>
+                    <a href="lecion.html"><li>ЛЕКЦИИ</li></a>
+                    <a href="lab.html"><li>ЛАБОРАТОРНЫЕ</li></a>
+                    <a href="lit.html">
+                        <li>ЛИТЕРАТУРА</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "100" viewBox="0 0 283.46 283.46" style="enable-background:new 0 0 283.46 283.46;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+				</style>
+				<g id="Слой_1">
+					<g>
+						<path class="st0" d="M66.09,86.42h-11.3v112.06l179.71-0.16V85.94l-11.14,0.16l-0.16,101.08c0,0-56.19-9.87-78.64,4.93
+							c0,0-58.1-15.28-78.16-5.09L66.09,86.42z"/>
+						<path class="st0" d="M66.09,86.42c0-11.94,0-11.94,0-11.94s7.8-2.23,11.3,0l-0.32,89.94c0,0,52.05-3.66,67.49,27.7
+							c0,0,10.19-31.04,67.17-27.54l0.16-90.41c0,0,5.89-1.91,11.46,0V86.1"/>
+						<path class="st0" d="M77.4,74.48c0-10.82,0-10.82,0-10.82s48.87-11.3,67.33,11.3c0,0,7.32-19.42,67.17-11.14v11.78"/>
+						<path class="st0" d="M144.73,74.95c-0.32,116.2-0.16,117.16-0.16,117.16"/>
+					</g>
+				</g>
+				<g id="Слой_2">
+				</g>
+			</svg>
+                <div class="d-flex flex-column justify-content-center w-100 h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="btn-group my-5">
+                            <a  name="head" href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i></a>
+                            <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </header>
+            <main>
+                <h1 class="h1">ЛЕКЦИЯ 2</h1>
+                <h2>ЯЗЫК РАЗМЕТКИ HTML</h2>
+                <nav>
+                    <ol class="ol1">
+                        <li class="li">
+                            <a href="#1">ОСНОВНЫЕ ВЕРСИИ ЯЗЫКА</a>
+                        </li>
+                        <li class="li">
+                            <a href="#2">СИНТАКСИС HTML</a>
+                        </li>
+                        <li class="li">
+                            <a href="#3">КОДИРОВКА СИМВОЛОВ В HTML</a>
+                        </li>
+                        <li class="li">
+                            <a href="#4">СТРУКТУРА HTML</a>
+                        </li>
+                    </ol>
+                </nav>
+                <h3>
+                    ОПРЕДЕЛЕНИЕ
+                </h3>
+                <section class="sec">
+                    <p>
+                        <span>HTML (HyperText Markup Language)</span> язык гипертекстовой разметки, который предназначен для создания веб-страниц и представляет собой набор правил.
+                    </p>
+                    <p>
+                        <span>ГИПЕРТЕКСТ</span> – информационная структура, позволяющая устанавливать смысловые связи между элементами текста на экране компьютера таким образом, чтобы можно было легко осуществлять переходы от одного элемента к другому.
+                    </p>
+                </section>
+                <h3>
+                    <a name="1" href="#head">ОСНОВНЫЕ ВЕРСИИ ЯЗЫКА</a>
+                </h3>
+                <section class="sec">
+                    <p>
+                        В <span>1969г.</span> – начало истории HTML. Прототипом языка в этом году был язык для разметки технической документации, в последствии получил начвание JML.
+                    </p>
+                    <p>
+                        В <span>1986г.</span> он получил статус международного стандата SGML.
+                    </p>
+                    <p>
+                        <span>22 сентября 1995г.</span> версия HTML 2.0 была одобрена как стандарт языка консорциумом всемирной паутины.
+                    </p>
+                    <p>
+                        Версия HTML 3.0 отличалась только тем, что был введен СSS, но не была стандартизирована. В <span>1995г.</span> консорциум ввел HTML 3.0 в поддержку иерархических стилевых спецификаций CSS. 
+                    </p>
+                    <p>
+                        <span>14 января 1997г.</span> в HTML 3.2 были добавлены такие возможности как:
+                        <ul class="ul1">
+                            <li>создание таблиц</li>
+                            <li>обтекание изображений текстом</li>
+                            <li>отображение сложных математических формул</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <span>18 декабря 1997г.</span> версия HTML 4.0 содержала много элементов специфичных для отдельных браузеров, некоторые элементы были признаны устаревшими.
+                    </p>
+                    <p>
+                        <span>24 декабря 1999г.</span> версия HTML 4.1.
+                    </p>
+                    <p>
+                        <span>15 мая 2000г.</span> версия ISO HTML.
+                    </p>
+                    <p>
+                        <span>20 ноября 2007г.</span> появился черновой вариант версии HTML 5.
+                    </p>
+                    <p>
+                        <span>28 ноября 2014г.</span> версия HTML 5.
+                    </p>
+                    <p>
+                        <span>1 ноября 2016г.</span> версия HTML 5.1
+                    </p>
+                </section>
+                <h3>
+                    <a name="2" href="#head">СИНТАКСИС HTML</a>
+                </h3>
+                <section class="sec">
+                    <p>
+                        <span>ТЕГ (тэг, tag)</span> слова или символы, с помощью которых браузер распознает структуру и значение вашего текста. 
+                    </p>
+                    <p class="span">
+                        &lt;тег&gt;...&lt;/тег&gt;
+                    </p>
+                    <p>
+                        <span>АТРИБУТЫ</span> дополнительные значения, которые регулируют поведение HTML-элемента различным способом, чтобы соответствовать критериям пользователей.
+                    </p>
+                    <p class="span">
+                        &lt;тег имя атрибута="значение"&gt;...&lt;/тег&gt;
+                    </p>
+                    <div class="img">
+                        <img src="lec2\img\html.png" alt="html-element">
+                    </div>
+                </section>
+                <img src="lec2\img\tags.png" alt="tags" class="tg">
+                <section class="sec">
+                    <p>
+                        <span>1.</span> Регистр имен тегов и атрибутов не имеет значения
+                    </p>
+                    <p class="span">
+                        &lt;IMG&gt; = &lt;Img&gt; = &lt;IMg&gt; = &lt;img&gt;
+                    </p>
+                    <p>
+                        <span>2.</span> Наличие и количество пробелов между тегом и текстом или тегом и тегом не имеет значения
+                    </p>
+                    <p>
+                        <span>3.</span> Необходимо соблюдать порядок вложенности тегов
+                    </p>
+                    <p class="span">
+                        &lt;P&gt;&lt;B&gt;Текст полужирным шрифтом&lt;/B&gt;&lt;/P&gt;
+                    </p>
+                    <p class="span1">
+                        &lt;P&gt;&lt;B&gt;Текст полужирным шрифтом&lt;/P&gt;&lt;/B&gt;
+                    </p>
+                    <p>
+                       <span> 4.</span> При написании значений атрибутов используйте только двойные кавычки
+                    </p>
+                    <p>
+                        <span>5.</span> Можно использовать несколько атрибутов, разделенных пробелами
+                    </p>
+                    <p class="span">
+                        &lt;p class="post" id="first" &gt;….&lt;/p&gt;
+                    </p>
+                    <p>
+                        <span>6.</span> Использовать одинарные кавычки, если в значении есть часть, которая отдельно должна быть заключена в кавычки
+                    </p>
+                    <p class="span">
+                        &lt;abbr title='Hypertext "Markup" Language'&gt;…&lt;/abbr&gt;
+                    </p>
+                    <p>
+                        <span>7.</span> Можно линейное использование
+                    </p>
+                    <p class="span">
+                        &lt;Тег1&gt;текст&lt;/Тег1&gt; 
+                    </p>
+                    <p class="span">
+                        &lt;Тег2&gt;текст2&lt;/Тег2&gt; 
+                    </p>
+                    <p>
+                        <span>8.</span> Последовательное использование
+                    </p>
+                    <p class="span">
+                        &lt;Тег1&gt;&lt;Тег2&gt;текст&lt;/Тег2&gt;&lt;/Тег1&gt;
+                    </p>
+                    <p>
+                        <span>9.</span> Иерархическое использование <span>ЗАПРЕЩЕНО</span>
+                    </p>
+                    <p class="span">
+                        &lt;Тег1 &lt;Тег2&gt; &gt;текст&lt;/Тег2 &lt;/Тег1&gt;
+                    </p>
+                </section>
+                <section class="sec">
+                    <h4 class="h4">СПОСОБ ЗАДАНИЯ ЦВЕТА</h4>
+                    <p>
+                        <span>1.</span> По его названию:
+                    </p>
+                    <p class="span">
+                        style="color:red"
+                    </p>
+                    <p>
+                        <span>2.</span> В шестнадцатеричной системе счисления.
+                    </p>
+                    <p class="span">
+                        style="color:#FF0000"
+                    </p>
+                    <p>
+                        <span>3.</span> С помощью RGB
+                    </p>
+                    <p class="span">
+                        style="color:rgb(255, 0, 0)" 
+                    </p>
+                    <p class="span">
+                        или style="color:rgb(100%, 0%, 0%)" 
+                    </p>
+                    <p>
+                        <span>4.</span> С помощью RGBA
+                    </p>
+                    <p class="span">
+                        style="color:rgb(0, 0, 0, 0.5) " 
+                    </p>
+                    <p class="span">
+                        или style="color:rgb(100%, 0%, 0%) " 
+                    </p>
+                    <p>
+                        <span>A (alpha chanel)</span> альфа канал, который управляет прозрачностью
+                    </p>
+                    <p>
+                        <span> 5.</span> С помощью HSL (Hue, Saturation, Lightness — тон, насыщенность, светлота
+                    </p>
+                </section>
+                <h4 class="h4">АДРЕСАЦИЯ В HTML</h4>
+                <section class="sec">
+                    <p>
+                        <span>АБСОЛЮТНАЯ АДРЕСАЦИЯ</span> – при абсолютной адресации путь к файлу должен быть прописан полностью
+                    </p>
+                    <p class="span">
+                        D:/site/image/ris.gif
+                    </p>
+                    <p class="span">
+                        https://www.belstu.com/ site/image/ris.gif
+                    </p>
+                </section>
+                <section class="sec">
+                    <p>
+                        <span>ОТНОСИТЕЛЬНАЯ АДРЕСАЦИЯ</span> – при данном методе адресации весь материал необходимый для вашего ресурса должен находиться в одной папке
+                    </p>
+                    <p class="span">
+                        <span>/* относительный путь от документа */</span>
+                    </p>
+                    <p class="span">
+                        url(../images/1.jpg) 
+                    </p>
+                    <p class="span">
+                        <span>/* относительный путь от корневого каталога */</span>
+                    </p>
+                    <p class="span">
+                        url(/images/1.jpg)
+                    </p>
+                    <p class="span2">
+                        ../ означает поднятся на уровень выше
+                    </p>
+                    <p class="span2">
+                        / означает обращение к каталогу
+                    </p>
+                </section>
+                <h3>
+                    <a name="3" href="#head">КОДИРОВКА СИМВОЛОВ В HTML</a>
+                </h3>
+                <section class="sec1">
+                    <p>
+                        <span>Кодировка символов</span> международное представление букв, цифр и символов в веб-странице или любом другом файле, который хранится на компьютере и может быть передан через Интернет.
+                    </p>
+                    <p>
+                        <span>ASCII</span> (American Standard Code for Information Interchange, американская стандартная кодировочная таблица для печатных символов и некоторых специальных кодов)— одна из самых старых компьютерных кодировок, в которой каждому символу соответствует строго определенное число. Это 7-битная кодировка, содержащая 128 символов
+                    </p>
+                    <p class="span">
+                        &lt;p&gt;Текст&#38;#33;&lt;/p&gt; &#8594; Текст!
+                    </p>
+                    <p>
+                        <span>Windows-1251</span> — набор символов и кодировка, являющаяся стандартной 8-битной кодировкой для всех русских версий Microsoft Windows. Данная кодировка пользуется довольно большой популярностью в восточно-европейских странах. Windows-1251 отличается от других 8-битных кириллических кодировок наличием практически всех символов, использующихся в традиционной русской типографике для обычного текста (отсутствует только знак ударения)
+                    </p>
+                    <p>
+                        <span>ISO-8859-1</span> — кодировка по умолчанию в большинстве современных браузеров.
+                    </p>
+                    <p>
+                        Первые 128 символов ISO-8859-1 закодированы так же, как и в ASCII (прописные и строчные латинские буквы, цифры от 1 до 9 и некоторые другие символы).
+                    </p>
+                    <p>
+                        Коды от 160 до 255 содержат символы, используемые в западно-европейских странах и часто используемые спецсимволы.
+                    </p>
+                    <p>
+                        <span>UTF-8</span> – кодировка символов юникод в двоичном виде. Область UTF-8 с кодами от U+0000 до U+0500 — это базовая область символов кирилицы. Если Вы хотите какой-либо из этих знаков отобразить в HTML-документе, Вы можете использовать шестнадцатеричное (Hex) значение ( &#x + код + ;) или десятичное (Dec) значение ( &# + код + ;) из таблицы кодов
+                    </p>
+                    <p>
+                        <span>& – амперсант</span>
+                    </p>
+                    <p>
+                        <span># – октоторп</span>
+                    </p>
+                </section>
+                <h4 class="h4">пример</h4>
+                <div class="divcode">
+                    <div class="code1">
+                        <div id="highlighter_432620" class="syntaxhighlighter  xml">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="gutter">
+                                            <div class="line number1 index0 alt2">1</div>
+                                            <div class="line number2 index1 alt1">2</div>
+                                            <div class="line number3 index2 alt2">3</div>
+                                            <div class="line number4 index3 alt1">4</div>
+                                            <div class="line number5 index4 alt2">5</div>
+                                            <div class="line number6 index5 alt1">6</div>
+                                            <div class="line number7 index6 alt2">7</div>
+                                            <div class="line number8 index7 alt1">8</div>
+                                            <div class="line number9 index8 alt2">9</div>
+                                            <div class="line number10 index9 alt1">10</div>
+                                            <div class="line number11 index10 alt2">11</div>
+                                            <div class="line number12 index11 alt1">12</div>
+                                            <div class="line number13 index12 alt2">13</div>
+                                        </td>
+                                        <td class="code">
+                                            <div class="container">
+                                                <div class="line number1 index0 alt2"><code class="xml plain">&lt;!DOCTYPE&nbsp;html&gt;</code></div>
+                                                <div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">html</code>&nbsp;<code class="xml color1">lang</code><code class="xml plain">=</code><code class="xml string">"en"</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"UTF-8"</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">http-equiv</code><code class="xml plain">=</code><code class="xml string">"X-UA-Compatible"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"IE=edge"</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"viewport"</code>&nbsp;<code class="xml color1">content</code><code class="xml plain">=</code><code class="xml string">"width=device-width,&nbsp;initial-scale=1.0"</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Document&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">h1</code><code class="xml plain">&gt;&amp;#169;&lt;/</code><code class="xml keyword">h1</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">p</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <h3>
+                    <a name="4" href="#head">СТРУКТУРА HTML</a>
+                </h3>
+                <section class="sec">
+                    <p>
+                        <span>ПРЕДОК</span> – HTML-элемент, который заключает в себе другие элементы.
+                    </p>
+                    <p>
+                        <span>ПОТОМОК</span> – элемент, расположенный внутри одного или более типов.
+                    </p>
+                    <p>
+                        <span>РОДИТЕЛЬСКИЙ ЭЛЕМЕНТ</span> связан с другими элементами более низкого уровня и находится выше в дереве.
+                    </p>
+                    <p>
+                        <span>ДОЧЕРНИЙ ЭЛЕМЕНТ</span> – элемент, непосредственно подчиненный другому элементу более высокого уровня.
+                    </p>
+                    <p>
+                        <span>РОДСТВЕННЫЕ ЭЛЕМЕНТЫ</span> – элементы, являющиеся дочерними для одного и того же родительского элемента.
+                    </p>
+                </section>
+                <div class="divcode">
+                    <div class="code1">
+                        <div id="highlighter_593590" class="syntaxhighlighter  xml">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="gutter">
+                                            <div class="line number1 index0 alt2">1</div>
+                                            <div class="line number2 index1 alt1">2</div>
+                                            <div class="line number3 index2 alt2">3</div>
+                                            <div class="line number4 index3 alt1">4</div>
+                                            <div class="line number5 index4 alt2">5</div>
+                                            <div class="line number6 index5 alt1">6</div>
+                                            <div class="line number7 index6 alt2">7</div>
+                                            <div class="line number8 index7 alt1">8</div>
+                                            <div class="line number9 index8 alt2">9</div>
+                                            <div class="line number10 index9 alt1">10</div>
+                                            <div class="line number11 index10 alt2">11</div>
+                                        </td>
+                                        <td class="code">
+                                            <div class="container">
+                                                <div class="line number1 index0 alt2"><code class="xml keyword">&lt;!DOCTYPE&nbsp;HTML&nbsp;&gt;</code></div>
+                                                <div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">HTML</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Заголовок&nbsp;страницы&nbsp;размещается&nbsp;здесь&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number5 index4 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">meta</code>&nbsp;<code class="xml color1">charset</code><code class="xml plain">=</code><code class="xml string">"utf-8"</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number6 index5 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number7 index6 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number8 index7 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">h1</code><code class="xml plain">&gt;Заголовок&nbsp;первого&nbsp;уровня&lt;/</code><code class="xml keyword">h1</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number9 index8 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">p</code><code class="xml plain">&gt;текст&nbsp;страницы&nbsp;и&nbsp;прочие&nbsp;HTML&nbsp;5-теги&nbsp;размещаются&nbsp;здесь&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number10 index9 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div>
+                                                <div class="line number11 index10 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">HTML</code>&nbsp;<code class="xml plain">&gt;</code>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <img src="lec2\img\structure.png" alt="structure">
+                <section class="sec">
+                    <h4 class="h4">ОБЪЯВЛЕНИЕ ДОКУМЕНТА</h4>
+                    <p>
+                        <span>&lt;!DOCTYPE HTML&gt;</span>
+                    </p>
+                    <p class="span">
+                        ИСПОЛЬЗОВАТЬ В КОДЕ ОБЯЗАТЕЛЬНО!!!
+                    </p>
+                    <p>
+                        Это объявление типа документа указывается в первой строке HTML-файла и определяет версию HTML5.
+                    </p>
+                    <p>
+                        Если указать объявление типа документа с ошибкой или опустить его, то браузер переключится в состояние, называемое <span>режимом совместимости</span>. 
+                    </p>
+                </section>
+                <section class="sec">
+                    <h4 class="h4">СЕМАНТИЧЕСКИЕ ТЕГИ</h4>
+                    <p>
+                        <span>СЕМАНТИКА</span> – это изучение значений слов и фраз на языке
+                    </p>
+                    <p>
+                        <span>СЕМАНТИЧЕСКИЕ ЭЛЕМЕНТЫ</span> – элементы с смыслом
+                    </p>
+                    <p>
+                        <span>СЕМАНТИЧЕСКИЕ ТЕГИ</span> – теги, которые предназначены для того, чтобы компьютерные программы(поисковые системы, сборники информации, речевые браузеры и т.д.), понимали, какой тип информации заложен в данных тегах
+                    </p>
+                    <h4 class="h4">АТРИБУТЫ СОБЫТИЙ</h4>
+                    <p>
+                        Специальные глобальные атрибуты, используемые в тегах для вызова обработчиков событий, написанных на различных языках сценариев, таких как JavaScript и вызываемых, когда на странице происходит какое-либо действие.
+                    </p>
+                </section>
+                <section class="sec">
+                    <h4 class="ps">P.S.</h4>
+                    <p>
+                        <span>div</span> является универсальным блочным элементом и предназначен для групирования элементов документа с целью изменения вида содержимого через стили.
+                    </p>
+                    <p>
+                        <span>span</span> является строчным элементом и предназначен для выделения отдельных строк, символов или других строчных элементов для дальнейшего изменения их оформления с помощью стилей, либо для манипулирования или при помощи JavaScript.
+                    </p>
+                </section>
+                <p class="span3">&lt;!--не забывайте про комментарии--&gt;</p>
+            </main>
+            <div class="pred">
+                <a href="lection1.html">&#9668;Предыдущая лекция</a>
+            </div>
+            <div class="sled">
+                <a href="lection3.html">Cледующая лекция &#9658;</a>
+            </div>
+        <script src="lec1\js\jquery-1.7.2.min.js" type="text/javascript"></script>
+        <script src="lec1\js\easing.js" type="text/javascript"></script>
+        <script src="lec1\js\jquery.ui.totop.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });});
+        </script>
+    </body>
+</html>
